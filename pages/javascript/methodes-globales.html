@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript — Objets et methodes globales — apprendre-le-code</title>
+<meta name="description" content="Math, JSON, Date, Number, Map, Set et les fonctions globales.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-js">JS</span><span class="sep">/</span>Reference : objets et methodes globales</div>
+<h1>Objets et methodes globales</h1>
+<p class="lede">Au-dela des types primitifs et du DOM, JavaScript fournit des objets integres pour les maths, les dates, le JSON et plus.</p>
+
+<h2>Math</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">Math.round(x)</code><p>Arrondit x a l'entier le plus proche.</p></div>
+<div class="fn-card"><code class="fn-name">Math.floor(x)</code><p>Arrondit vers le bas.</p></div>
+<div class="fn-card"><code class="fn-name">Math.ceil(x)</code><p>Arrondit vers le haut.</p></div>
+<div class="fn-card"><code class="fn-name">Math.trunc(x)</code><p>Tronque la partie decimale.</p></div>
+<div class="fn-card"><code class="fn-name">Math.abs(x)</code><p>Valeur absolue.</p></div>
+<div class="fn-card"><code class="fn-name">Math.pow(x, y)</code><p>x eleve a la puissance y.</p></div>
+<div class="fn-card"><code class="fn-name">Math.sqrt(x)</code><p>Racine carree.</p></div>
+<div class="fn-card"><code class="fn-name">Math.max(...vals) / Math.min(...vals)</code><p>Maximum / minimum d'une liste de valeurs.</p></div>
+<div class="fn-card"><code class="fn-name">Math.random()</code><p>Nombre aleatoire entre 0 (inclus) et 1 (exclu).</p></div>
+<div class="fn-card"><code class="fn-name">Math.PI / Math.E</code><p>Constantes mathematiques.</p></div>
+</div>
+<h2>JSON</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">JSON.stringify(obj)</code><p>Convertit un objet JavaScript en texte JSON.</p></div>
+<div class="fn-card"><code class="fn-name">JSON.parse(texte)</code><p>Convertit du texte JSON en objet JavaScript.</p></div>
+</div>
+<h2>Date</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">new Date()</code><p>Date/heure actuelle.</p></div>
+<div class="fn-card"><code class="fn-name">new Date(2026, 8, 12)</code><p>Date specifique (mois indexe a partir de 0 !).</p></div>
+<div class="fn-card"><code class="fn-name">date.getFullYear() / getMonth() / getDate()</code><p>Composants de la date.</p></div>
+<div class="fn-card"><code class="fn-name">date.getHours() / getMinutes() / getSeconds()</code><p>Composants de l'heure.</p></div>
+<div class="fn-card"><code class="fn-name">date.getTime()</code><p>Timestamp en millisecondes depuis 1970.</p></div>
+<div class="fn-card"><code class="fn-name">date.toISOString()</code><p>Format standard ISO 8601.</p></div>
+<div class="fn-card"><code class="fn-name">date.toLocaleDateString('fr-FR')</code><p>Format de date localise.</p></div>
+</div>
+<h2>Number</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">Number.isInteger(x)</code><p>Verifie si x est un entier.</p></div>
+<div class="fn-card"><code class="fn-name">Number.isNaN(x)</code><p>Verifie si x est NaN (plus fiable que isNaN global).</p></div>
+<div class="fn-card"><code class="fn-name">Number.parseFloat(str) / parseInt(str)</code><p>Equivalents des fonctions globales.</p></div>
+<div class="fn-card"><code class="fn-name">x.toFixed(n)</code><p>Formate un nombre avec n decimales, retourne une chaine.</p></div>
+<div class="fn-card"><code class="fn-name">x.toString(base)</code><p>Convertit en chaine dans la base donnee (2, 16...).</p></div>
+<div class="fn-card"><code class="fn-name">Number.MAX_SAFE_INTEGER</code><p>Plus grand entier representable sans perte de precision.</p></div>
+</div>
+<h2>Array (statique)</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">Array.isArray(x)</code><p>Verifie si x est un tableau.</p></div>
+<div class="fn-card"><code class="fn-name">Array.from(iterable)</code><p>Cree un tableau depuis un iterable ou un objet array-like.</p></div>
+<div class="fn-card"><code class="fn-name">Array.of(...elements)</code><p>Cree un tableau a partir des arguments donnes.</p></div>
+</div>
+<h2>String (statique)</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">String.fromCharCode(code)</code><p>Cree un caractere depuis un code Unicode.</p></div>
+</div>
+<h2>Structures avancees</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">new Map()</code><p>Collection cle-valeur ordonnee, cles de n'importe quel type.</p></div>
+<div class="fn-card"><code class="fn-name">new Set()</code><p>Collection de valeurs uniques.</p></div>
+<div class="fn-card"><code class="fn-name">new WeakMap() / new WeakSet()</code><p>Versions avec references faibles (garbage-collectees).</p></div>
+</div>
+<h2>Fonctions globales</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">setTimeout(fn, ms)</code><p>Execute fn une fois apres ms millisecondes.</p></div>
+<div class="fn-card"><code class="fn-name">setInterval(fn, ms)</code><p>Execute fn de facon repetee toutes les ms millisecondes.</p></div>
+<div class="fn-card"><code class="fn-name">clearTimeout(id) / clearInterval(id)</code><p>Annule un timer en cours.</p></div>
+<div class="fn-card"><code class="fn-name">encodeURIComponent(str) / decodeURIComponent(str)</code><p>Encode/decode du texte pour une URL.</p></div>
+<div class="fn-card"><code class="fn-name">structuredClone(obj)</code><p>Copie profonde native d'un objet.</p></div>
+</div>
+
+<h2>Map vs Object</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>Map</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const map = new Map();
+map.set("nom", "Ada");
+map.set(42, "reponse");     // les cles peuvent etre n'importe quel type
+
+console.log(map.get("nom"));
+console.log(map.size);
+console.log(map.has(42));
+
+for (const [cle, valeur] of map) {
+  console.log(cle, valeur);
+}</textarea>
+  <div class="js-output"></div>
+</div>
+<p>Contrairement a un objet litteral, une <code>Map</code> accepte des cles de n'importe quel type (pas seulement des chaines), garantit l'ordre d'insertion, et expose une propriete <code>.size</code> directe.</p>
+
+<div class="page-nav">
+  <a href="asynchrone.html"><span class="lbl">Precedent</span>Asynchrone</a>
+  <a href="es6-plus.html"><span class="lbl">Suivant</span>ES6 et au-dela</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

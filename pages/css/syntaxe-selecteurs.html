@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS — Syntaxe et selecteurs — apprendre-le-code</title>
+<meta name="description" content="Tous les selecteurs CSS : classes, id, attributs, pseudo-classes, pseudo-elements.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-css">CSS</span><span class="sep">/</span>Syntaxe et selecteurs</div>
+<h1>Syntaxe et selecteurs</h1>
+<p class="lede">Les selecteurs determinent quels elements HTML une regle CSS va styler. Il en existe pour tous les besoins : par type, classe, id, position dans le document, ou etat.</p>
+
+<h2>Selecteurs de base</h2>
+<table class="ref-table">
+  <thead><tr><th>Selecteur</th><th>Cible</th><th>Exemple</th></tr></thead>
+  <tbody>
+    <tr><td>*</td><td>Tous les elements.</td><td>* { margin: 0; }</td></tr>
+    <tr><td>element</td><td>Toutes les balises de ce type.</td><td>p { color: gray; }</td></tr>
+    <tr><td>.classe</td><td>Tous les elements ayant cette classe.</td><td>.carte { border: 1px solid; }</td></tr>
+    <tr><td>#id</td><td>L'element unique ayant cet id.</td><td>#header { height: 60px; }</td></tr>
+    <tr><td>a, b</td><td>Selecteur groupe : a ET b (liste).</td><td>h1, h2 { font-weight: bold; }</td></tr>
+  </tbody>
+</table>
+
+<h2>Selecteurs de combinaison</h2>
+<table class="ref-table">
+  <thead><tr><th>Selecteur</th><th>Cible</th><th>Exemple</th></tr></thead>
+  <tbody>
+    <tr><td>A B</td><td>Descendant : B a n'importe quel niveau dans A.</td><td>nav a { color: white; }</td></tr>
+    <tr><td>A &gt; B</td><td>Enfant direct : B, enfant immediat de A.</td><td>ul &gt; li { list-style: none; }</td></tr>
+    <tr><td>A + B</td><td>Frere adjacent : B immediatement apres A.</td><td>h2 + p { font-weight: bold; }</td></tr>
+    <tr><td>A ~ B</td><td>Frere general : B apres A, meme parent.</td><td>h2 ~ p { color: gray; }</td></tr>
+  </tbody>
+</table>
+
+<div class="sandbox" data-sandbox="css" data-preview-html="&lt;ul&gt;&lt;li&gt;Un&lt;/li&gt;&lt;li&gt;Deux&lt;/li&gt;&lt;li&gt;Trois&lt;/li&gt;&lt;/ul&gt;">
+  <div class="sandbox-bar"><span>Combinateurs</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">ul > li {
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+li + li {
+  color: #999;
+}</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>Selecteurs d'attribut</h2>
+<table class="ref-table">
+  <thead><tr><th>Selecteur</th><th>Cible</th></tr></thead>
+  <tbody>
+    <tr><td>[attr]</td><td>Possede l'attribut, quelle que soit sa valeur.</td></tr>
+    <tr><td>[attr="valeur"]</td><td>L'attribut vaut exactement "valeur".</td></tr>
+    <tr><td>[attr~="valeur"]</td><td>"valeur" est l'un des mots de l'attribut (separes par espaces).</td></tr>
+    <tr><td>[attr^="valeur"]</td><td>L'attribut commence par "valeur".</td></tr>
+    <tr><td>[attr$="valeur"]</td><td>L'attribut se termine par "valeur".</td></tr>
+    <tr><td>[attr*="valeur"]</td><td>L'attribut contient "valeur" n'importe ou.</td></tr>
+    <tr><td>[attr="valeur" i]</td><td>Comparaison insensible a la casse.</td></tr>
+  </tbody>
+</table>
+
+<h2>Pseudo-classes</h2>
+<table class="ref-table">
+  <thead><tr><th>Pseudo-classe</th><th>Cible</th></tr></thead>
+  <tbody>
+    <tr><td>:hover</td><td>Element survole par la souris.</td></tr>
+    <tr><td>:focus</td><td>Element ayant le focus clavier.</td></tr>
+    <tr><td>:focus-visible</td><td>Focus visible uniquement (clavier), pas au clic souris.</td></tr>
+    <tr><td>:active</td><td>Element en cours d'activation (clic maintenu).</td></tr>
+    <tr><td>:visited</td><td>Lien deja visite.</td></tr>
+    <tr><td>:link</td><td>Lien non visite.</td></tr>
+    <tr><td>:first-child</td><td>Premier enfant de son parent.</td></tr>
+    <tr><td>:last-child</td><td>Dernier enfant de son parent.</td></tr>
+    <tr><td>:nth-child(n)</td><td>Enfant a la position n (1-indexe). Accepte des formules : 2n, odd, even.</td></tr>
+    <tr><td>:nth-last-child(n)</td><td>Comme nth-child mais en comptant depuis la fin.</td></tr>
+    <tr><td>:only-child</td><td>Element etant l'unique enfant de son parent.</td></tr>
+    <tr><td>:first-of-type</td><td>Premier element de ce type parmi ses freres.</td></tr>
+    <tr><td>:last-of-type</td><td>Dernier element de ce type parmi ses freres.</td></tr>
+    <tr><td>:nth-of-type(n)</td><td>Element de ce type a la position n parmi ses freres du meme type.</td></tr>
+    <tr><td>:not(selecteur)</td><td>Element ne correspondant PAS au selecteur donne.</td></tr>
+    <tr><td>:is(selecteurs)</td><td>Element correspondant a l'un des selecteurs listes (simplifie l'ecriture).</td></tr>
+    <tr><td>:where(selecteurs)</td><td>Comme :is() mais avec une specificite nulle.</td></tr>
+    <tr><td>:has(selecteur)</td><td>Element contenant un descendant qui correspond (selecteur parent).</td></tr>
+    <tr><td>:empty</td><td>Element sans aucun enfant (ni texte).</td></tr>
+    <tr><td>:disabled / :enabled</td><td>Champ de formulaire desactive / actif.</td></tr>
+    <tr><td>:checked</td><td>Case a cocher ou bouton radio coche.</td></tr>
+    <tr><td>:required / :optional</td><td>Champ de formulaire obligatoire / facultatif.</td></tr>
+    <tr><td>:valid / :invalid</td><td>Champ dont la valeur respecte / ne respecte pas la validation.</td></tr>
+    <tr><td>:placeholder-shown</td><td>Champ affichant encore son placeholder (vide).</td></tr>
+    <tr><td>:target</td><td>Element cible par l'ancre de l'URL courante (#id).</td></tr>
+    <tr><td>:root</td><td>L'element racine du document (html), utilise pour les variables CSS.</td></tr>
+    <tr><td>:lang(code)</td><td>Element dans la langue specifiee.</td></tr>
+  </tbody>
+</table>
+
+<div class="sandbox" data-sandbox="css" data-preview-html="&lt;ul&gt;&lt;li&gt;Un&lt;/li&gt;&lt;li&gt;Deux&lt;/li&gt;&lt;li&gt;Trois&lt;/li&gt;&lt;li&gt;Quatre&lt;/li&gt;&lt;/ul&gt;">
+  <div class="sandbox-bar"><span>nth-child</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">li:nth-child(odd) {
+  background: #f0f0f0;
+}
+
+li:nth-child(2) {
+  color: crimson;
+  font-weight: bold;
+}</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>Pseudo-elements</h2>
+<table class="ref-table">
+  <thead><tr><th>Pseudo-element</th><th>Cible</th></tr></thead>
+  <tbody>
+    <tr><td>::before</td><td>Insere du contenu genere avant le contenu de l'element (necessite content).</td></tr>
+    <tr><td>::after</td><td>Insere du contenu genere apres le contenu de l'element.</td></tr>
+    <tr><td>::first-line</td><td>Premiere ligne affichee d'un bloc de texte.</td></tr>
+    <tr><td>::first-letter</td><td>Premiere lettre d'un bloc de texte.</td></tr>
+    <tr><td>::selection</td><td>Portion de texte selectionnee par l'utilisateur.</td></tr>
+    <tr><td>::placeholder</td><td>Texte d'exemple d'un champ de formulaire.</td></tr>
+    <tr><td>::marker</td><td>Puce ou numero d'un element de liste.</td></tr>
+    <tr><td>::backdrop</td><td>Fond derriere un element en plein ecran ou une dialog modale.</td></tr>
+</tbody>
+</table>
+
+<h2>Specificite : comment ca se calcule</h2>
+<p>La specificite se calcule en trois categories, du plus fort au plus faible :</p>
+<ol>
+  <li>ID (#id) — poids fort</li>
+  <li>Classes, attributs, pseudo-classes (.classe, [attr], :hover) — poids moyen</li>
+  <li>Elements et pseudo-elements (div, ::before) — poids faible</li>
+</ol>
+<p>Un style en ligne (attribut style) bat toutes les specificites de feuille de style, et <code>!important</code> bat tout le reste (a utiliser avec grande parcimonie).</p>
+
+<div class="page-nav">
+  <a href="index.html"><span class="lbl">Precedent</span>Introduction</a>
+  <a href="boite-modele.html"><span class="lbl">Suivant</span>Modele de boite</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

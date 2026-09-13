@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML — Accessibilite — apprendre-le-code</title>
+<meta name="description" content="Les bases de l accessibilite web et les attributs ARIA.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-html">HTML</span><span class="sep">/</span>Accessibilite (a11y)</div>
+<h1>Accessibilite (a11y)</h1>
+<p class="lede">Rendre une page accessible signifie qu'elle est utilisable par tous : personnes malvoyantes avec un lecteur d'ecran, personnes ne pouvant pas utiliser de souris, personnes daltoniennes, etc. Un HTML semantique correct fait deja 80% du travail.</p>
+
+<h2>Principes de base</h2>
+<ul>
+  <li>Utiliser les bonnes balises semantiques (nav, main, button plutot que div cliquable).</li>
+  <li>Toujours renseigner l'attribut <code>alt</code> des images.</li>
+  <li>Associer chaque champ de formulaire a un <code>&lt;label&gt;</code>.</li>
+  <li>Respecter la hierarchie des titres (h1 puis h2 puis h3, sans sauter de niveau).</li>
+  <li>Garantir un contraste de couleur suffisant entre texte et fond.</li>
+  <li>Verifier que tout est utilisable au clavier seul (touche Tab).</li>
+</ul>
+
+<h2>Attributs ARIA courants</h2>
+<table class="ref-table">
+  <thead><tr><th>Attribut</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>aria-label</td><td>Nom accessible quand il n'y a pas de texte visible (ex : bouton icone seule).</td></tr>
+    <tr><td>aria-labelledby</td><td>Reference l'id d'un autre element servant de libelle.</td></tr>
+    <tr><td>aria-describedby</td><td>Reference l'id d'un element fournissant une description complementaire.</td></tr>
+    <tr><td>aria-hidden</td><td>Masque un element pour les technologies d'assistance (mais reste visible visuellement).</td></tr>
+    <tr><td>aria-live</td><td>Indique qu'une zone se met a jour dynamiquement et doit etre annoncee (polite, assertive).</td></tr>
+    <tr><td>aria-expanded</td><td>Indique si un element extensible (menu, accordeon) est ouvert ou ferme.</td></tr>
+    <tr><td>aria-current</td><td>Indique l'element courant dans un ensemble (page, etape, lien de navigation actif).</td></tr>
+    <tr><td>aria-disabled</td><td>Indique qu'un element est desactive sans utiliser l'attribut disabled natif.</td></tr>
+    <tr><td>aria-invalid</td><td>Indique qu'une valeur de formulaire est invalide.</td></tr>
+    <tr><td>role</td><td>Definit explicitement le role d'un element (button, alert, dialog, tab...).</td></tr>
+  </tbody>
+</table>
+
+<h2>Exemple : bouton icone accessible</h2>
+<div class="sandbox" data-sandbox="html">
+  <div class="sandbox-bar"><span>bouton avec aria-label</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">&lt;button aria-label="Fermer la fenetre"&gt;
+  &amp;times;
+&lt;/button&gt;
+
+&lt;!-- Sans aria-label, un lecteur d'ecran lirait juste "bouton" --&gt;</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>Elements natifs accessibles par defaut</h2>
+<p>HTML fournit deja des elements accessibles nativement, sans aucun ARIA a ajouter : <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code>, <code>&lt;dialog&gt;</code>. Utilisez-les plutot que de recreer leur comportement avec des &lt;div&gt; stylees et du JavaScript.</p>
+
+<div class="note ok">
+  <strong>Regle d'or.</strong> "No ARIA is better than bad ARIA." Un attribut ARIA incorrect peut degrader l'experience plus qu'une absence totale d'ARIA. Utilisez toujours la balise semantique native en premier recours.
+</div>
+
+<h2>Lien d'evitement (skip link)</h2>
+<div class="code-block">
+  <div class="code-head">exemple.html</div>
+  <pre><code><span class="tok-punc">&lt;</span><span class="tok-tag">a</span> <span class="tok-attr">href</span>=<span class="tok-val">"#contenu-principal"</span> <span class="tok-attr">class</span>=<span class="tok-val">"skip-link"</span><span class="tok-punc">&gt;</span>Aller au contenu principal<span class="tok-punc">&lt;/</span><span class="tok-tag">a</span><span class="tok-punc">&gt;</span>
+...
+<span class="tok-punc">&lt;</span><span class="tok-tag">main</span> <span class="tok-attr">id</span>=<span class="tok-val">"contenu-principal"</span><span class="tok-punc">&gt;</span>...<span class="tok-punc">&lt;/</span><span class="tok-tag">main</span><span class="tok-punc">&gt;</span></code></pre>
+</div>
+<p>Ce lien, souvent invisible jusqu'a recevoir le focus, permet aux utilisateurs de clavier de sauter directement au contenu sans devoir parcourir tout le menu de navigation.</p>
+
+<div class="page-nav">
+  <a href="meta-head.html"><span class="lbl">Precedent</span>Head, meta, SEO</a>
+  <a href="../css/index.html"><span class="lbl">Suivant</span>Passer a CSS</a>
+</div>
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

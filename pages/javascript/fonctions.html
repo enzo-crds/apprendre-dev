@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript — Fonctions — apprendre-le-code</title>
+<meta name="description" content="Declarations, expressions, fonctions flechees et le mot-cle this.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-js">JS</span><span class="sep">/</span>Fonctions</div>
+<h1>Fonctions</h1>
+<p class="lede">JavaScript propose plusieurs syntaxes pour definir une fonction, chacune avec des nuances de comportement, notamment vis-a-vis de <code>this</code>.</p>
+
+<h2>Trois syntaxes</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>declarations de fonction</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">// 1. Declaration de fonction (hissee / hoisted, utilisable avant sa definition)
+function saluer(nom) {
+  return `Bonjour, ${nom} !`;
+}
+console.log(saluer("Nadia"));
+
+// 2. Expression de fonction (pas hissee)
+const addition = function(a, b) {
+  return a + b;
+};
+console.log(addition(3, 4));
+
+// 3. Fonction flechee (arrow function) - syntaxe courte, tres utilisee
+const multiplier = (a, b) => a * b;
+console.log(multiplier(3, 4));
+
+// Fonction flechee avec un seul parametre (parentheses optionnelles)
+const carre = x => x * x;
+console.log(carre(5));
+
+// Corps avec plusieurs lignes : accolades + return explicite necessaires
+const complexe = (a, b) => {
+  const somme = a + b;
+  return somme * 2;
+};
+console.log(complexe(2, 3));</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Parametres par defaut</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>valeurs par defaut</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">function presenter(nom, age = 18, ville = "Paris") {
+  console.log(`${nom}, ${age} ans, habite a ${ville}`);
+}
+
+presenter("Tom");                    // utilise les valeurs par defaut
+presenter("Zoe", 25);
+presenter("Ana", undefined, "Lyon"); // undefined declenche la valeur par defaut</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>this : la difference cle avec les arrow functions</h2>
+<div class="note warn">
+  <strong>Point essentiel.</strong> Une fonction classique (function) a son propre <code>this</code>, determine par la maniere dont elle est appelee. Une fonction flechee (=&gt;) n'a PAS son propre <code>this</code> : elle herite de celui du contexte englobant. C'est pourquoi les arrow functions sont tres utilisees dans les callbacks a l'interieur de methodes d'objet.
+</div>
+
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>this dans les deux syntaxes</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const compteur = {
+  valeur: 0,
+  incrementerClassique: function() {
+    setTimeout(function() {
+      // ici, "this" ne pointe PLUS vers compteur (perdu dans le callback)
+      console.log("classique this.valeur:", this.valeur); // undefined
+    }, 10);
+  },
+  incrementerFleche: function() {
+    setTimeout(() => {
+      // ici, l'arrow function garde le "this" de la methode englobante
+      console.log("fleche this.valeur:", this.valeur); // 0
+    }, 10);
+  }
+};
+
+compteur.incrementerClassique();
+compteur.incrementerFleche();</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Fonctions comme valeurs</h2>
+<p>En JavaScript, les fonctions sont des "citoyens de premiere classe" : elles peuvent etre stockees dans des variables, passees en argument, retournees par d'autres fonctions.</p>
+
+<div class="code-block">
+  <div class="code-head">callbacks et fonctions d'ordre superieur</div>
+  <pre><code><span class="tok-kw">function</span> <span class="tok-fn">executer</span>(callback) {
+  callback();
+}
+
+<span class="tok-fn">executer</span>(() =&gt; <span class="tok-fn">console</span>.log(<span class="tok-str">"Execute !"</span>));
+
+<span class="tok-com">// Une fonction qui retourne une fonction (closure)</span>
+<span class="tok-kw">function</span> <span class="tok-fn">creerMultiplicateur</span>(facteur) {
+  <span class="tok-kw">return</span> (x) =&gt; x * facteur;
+}
+<span class="tok-kw">const</span> double = <span class="tok-fn">creerMultiplicateur</span>(<span class="tok-num">2</span>);
+<span class="tok-fn">console</span>.log(double(<span class="tok-num">5</span>));  <span class="tok-com">// 10</span></code></pre>
+</div>
+
+<div class="page-nav">
+  <a href="structures-controle.html"><span class="lbl">Precedent</span>Conditions et boucles</a>
+  <a href="tableaux-methodes.html"><span class="lbl">Suivant</span>Tableaux : reference des methodes</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

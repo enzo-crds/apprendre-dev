@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python — Fonctions integrees — apprendre-le-code</title>
+<meta name="description" content="Reference complete des fonctions builtins de Python.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-py">PY</span><span class="sep">/</span>Reference : fonctions integrees</div>
+<h1>Reference des fonctions integrees (builtins)</h1>
+<p class="lede">Ces fonctions sont disponibles partout en Python sans aucun import. Elles forment le coeur du langage.</p>
+
+<h2>Entree/sortie</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">print(*args, sep, end)</code><p>Affiche du texte dans la console.</p></div>
+<div class="fn-card"><code class="fn-name">input(prompt)</code><p>Lit une ligne saisie au clavier (retourne une str).</p></div>
+<div class="fn-card"><code class="fn-name">open(fichier, mode)</code><p>Ouvre un fichier (voir la page Fichiers).</p></div>
+</div>
+<h2>Types et conversions</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">int(x)</code><p>Convertit en entier.</p></div>
+<div class="fn-card"><code class="fn-name">float(x)</code><p>Convertit en nombre a virgule flottante.</p></div>
+<div class="fn-card"><code class="fn-name">str(x)</code><p>Convertit en chaine de caracteres.</p></div>
+<div class="fn-card"><code class="fn-name">bool(x)</code><p>Convertit en booleen.</p></div>
+<div class="fn-card"><code class="fn-name">list(iterable)</code><p>Convertit en liste.</p></div>
+<div class="fn-card"><code class="fn-name">tuple(iterable)</code><p>Convertit en tuple.</p></div>
+<div class="fn-card"><code class="fn-name">dict(...)</code><p>Cree un dictionnaire.</p></div>
+<div class="fn-card"><code class="fn-name">set(iterable)</code><p>Convertit en ensemble (elimine les doublons).</p></div>
+<div class="fn-card"><code class="fn-name">frozenset(iterable)</code><p>Set immuable.</p></div>
+<div class="fn-card"><code class="fn-name">bytes(x) / bytearray(x)</code><p>Convertit en sequence d'octets (im)mutable.</p></div>
+<div class="fn-card"><code class="fn-name">complex(reel, imag)</code><p>Cree un nombre complexe.</p></div>
+<div class="fn-card"><code class="fn-name">type(x)</code><p>Retourne le type de x.</p></div>
+<div class="fn-card"><code class="fn-name">isinstance(x, type)</code><p>Verifie si x est une instance de type.</p></div>
+</div>
+<h2>Nombres et maths</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">abs(x)</code><p>Valeur absolue.</p></div>
+<div class="fn-card"><code class="fn-name">round(x, n)</code><p>Arrondit x a n decimales.</p></div>
+<div class="fn-card"><code class="fn-name">pow(x, y)</code><p>x a la puissance y.</p></div>
+<div class="fn-card"><code class="fn-name">divmod(a, b)</code><p>Retourne (quotient, reste) sous forme de tuple.</p></div>
+<div class="fn-card"><code class="fn-name">sum(iterable)</code><p>Somme des elements.</p></div>
+<div class="fn-card"><code class="fn-name">min(iterable)</code><p>Plus petite valeur.</p></div>
+<div class="fn-card"><code class="fn-name">max(iterable)</code><p>Plus grande valeur.</p></div>
+</div>
+<h2>Sequences et iteration</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">len(x)</code><p>Nombre d'elements de x.</p></div>
+<div class="fn-card"><code class="fn-name">range(debut, fin, pas)</code><p>Genere une sequence de nombres.</p></div>
+<div class="fn-card"><code class="fn-name">enumerate(iterable)</code><p>Ajoute un index a chaque element d'un iterable.</p></div>
+<div class="fn-card"><code class="fn-name">zip(*iterables)</code><p>Combine plusieurs iterables element par element.</p></div>
+<div class="fn-card"><code class="fn-name">sorted(iterable, key, reverse)</code><p>Retourne une nouvelle liste triee.</p></div>
+<div class="fn-card"><code class="fn-name">reversed(sequence)</code><p>Retourne un iterateur inverse.</p></div>
+<div class="fn-card"><code class="fn-name">map(fonction, iterable)</code><p>Applique une fonction a chaque element.</p></div>
+<div class="fn-card"><code class="fn-name">filter(fonction, iterable)</code><p>Garde les elements pour lesquels la fonction retourne True.</p></div>
+<div class="fn-card"><code class="fn-name">all(iterable)</code><p>True si tous les elements sont vrais.</p></div>
+<div class="fn-card"><code class="fn-name">any(iterable)</code><p>True si au moins un element est vrai.</p></div>
+<div class="fn-card"><code class="fn-name">iter(objet)</code><p>Cree un iterateur a partir d'un iterable.</p></div>
+<div class="fn-card"><code class="fn-name">next(iterateur)</code><p>Recupere l'element suivant d'un iterateur.</p></div>
+</div>
+<h2>Objets et classes</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">object()</code><p>Cree un objet de base.</p></div>
+<div class="fn-card"><code class="fn-name">super()</code><p>Acces a la classe parente dans une classe fille.</p></div>
+<div class="fn-card"><code class="fn-name">property()</code><p>Cree une propriete calculee dans une classe.</p></div>
+<div class="fn-card"><code class="fn-name">hasattr(objet, nom)</code><p>Verifie si l'objet possede cet attribut.</p></div>
+<div class="fn-card"><code class="fn-name">getattr(objet, nom, defaut)</code><p>Recupere un attribut par son nom (chaine).</p></div>
+<div class="fn-card"><code class="fn-name">setattr(objet, nom, valeur)</code><p>Definit un attribut par son nom.</p></div>
+<div class="fn-card"><code class="fn-name">delattr(objet, nom)</code><p>Supprime un attribut.</p></div>
+<div class="fn-card"><code class="fn-name">isinstance(x, Classe)</code><p>Verifie l'appartenance a une classe.</p></div>
+<div class="fn-card"><code class="fn-name">issubclass(Classe1, Classe2)</code><p>Verifie une relation d'heritage.</p></div>
+<div class="fn-card"><code class="fn-name">callable(x)</code><p>Verifie si x peut etre appele comme une fonction.</p></div>
+<div class="fn-card"><code class="fn-name">vars(objet)</code><p>Retourne le dictionnaire d'attributs de l'objet.</p></div>
+<div class="fn-card"><code class="fn-name">dir(objet)</code><p>Liste tous les attributs et methodes disponibles.</p></div>
+<div class="fn-card"><code class="fn-name">id(objet)</code><p>Identifiant unique de l'objet en memoire.</p></div>
+</div>
+<h2>Fonctionnel</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">lambda</code><p>Cree une fonction anonyme d'une seule expression.</p></div>
+<div class="fn-card"><code class="fn-name">eval(expression)</code><p>Evalue une expression Python depuis une chaine (a utiliser avec prudence).</p></div>
+<div class="fn-card"><code class="fn-name">exec(code)</code><p>Execute du code Python depuis une chaine (a utiliser avec prudence).</p></div>
+</div>
+<h2>Representation et formatage</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">repr(x)</code><p>Representation textuelle non ambigue, utile pour deboguer.</p></div>
+<div class="fn-card"><code class="fn-name">format(valeur, spec)</code><p>Formate une valeur selon une specification.</p></div>
+<div class="fn-card"><code class="fn-name">hex(x) / oct(x) / bin(x)</code><p>Convertit un entier en chaine hexadecimale/octale/binaire.</p></div>
+<div class="fn-card"><code class="fn-name">chr(n)</code><p>Retourne le caractere Unicode correspondant au code n.</p></div>
+<div class="fn-card"><code class="fn-name">ord(c)</code><p>Retourne le code Unicode du caractere c.</p></div>
+<div class="fn-card"><code class="fn-name">ascii(x)</code><p>Comme repr(), mais echappe les caracteres non-ASCII.</p></div>
+</div>
+<h2>Introspection et divers</h2>
+<div class="fn-grid">
+<div class="fn-card"><code class="fn-name">help(objet)</code><p>Affiche la documentation d'un objet ou d'une fonction.</p></div>
+<div class="fn-card"><code class="fn-name">globals() / locals()</code><p>Retourne les variables globales / locales sous forme de dict.</p></div>
+<div class="fn-card"><code class="fn-name">hash(x)</code><p>Retourne le hash de x (utilise pour les cles de dict/set).</p></div>
+<div class="fn-card"><code class="fn-name">input()</code><p>Lit une entree utilisateur.</p></div>
+<div class="fn-card"><code class="fn-name">__import__(nom)</code><p>Version bas niveau de l'instruction import.</p></div>
+</div>
+
+<h2>map, filter en pratique</h2>
+<div class="sandbox" data-sandbox="python">
+  <div class="sandbox-bar"><span>map et filter</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">nombres = [1, 2, 3, 4, 5, 6]
+
+doubles = list(map(lambda x: x * 2, nombres))
+print(doubles)          # [2, 4, 6, 8, 10, 12]
+
+pairs = list(filter(lambda x: x % 2 == 0, nombres))
+print(pairs)            # [2, 4, 6]
+
+# zip : combiner deux listes
+noms = ["Ana", "Bo", "Cy"]
+ages = [25, 30, 35]
+for nom, age in zip(noms, ages):
+    print(nom, age)</textarea>
+  <div class="py-output"></div>
+</div>
+
+<div class="page-nav">
+  <a href="chaines-fonctions.html"><span class="lbl">Precedent</span>Fonctions sur les chaines</a>
+  <a href="modules-stdlib.html"><span class="lbl">Suivant</span>Bibliotheque standard</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

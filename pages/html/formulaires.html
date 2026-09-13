@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML — Formulaires — apprendre-le-code</title>
+<meta name="description" content="Tous les types de champs de formulaire HTML et leurs attributs.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-html">HTML</span><span class="sep">/</span>Formulaires</div>
+<h1>Formulaires</h1>
+<p class="lede">Les formulaires permettent de collecter des donnees de l'utilisateur : texte, choix, fichiers. C'est l'une des parties les plus riches en attributs du HTML.</p>
+
+<h2>Structure de base</h2>
+<div class="sandbox" data-sandbox="html">
+  <div class="sandbox-bar"><span>Formulaire simple</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">&lt;form action="/envoyer" method="post"&gt;
+  &lt;label for="nom"&gt;Nom&lt;/label&gt;
+  &lt;input type="text" id="nom" name="nom" required placeholder="Votre nom"&gt;
+
+  &lt;label for="email"&gt;E-mail&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+
+  &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+&lt;/form&gt;</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<table class="ref-table">
+  <thead><tr><th>Attribut de &lt;form&gt;</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>action</td><td>URL vers laquelle envoyer les donnees.</td></tr>
+    <tr><td>method</td><td>Methode HTTP : get (donnees dans l'URL) ou post (donnees dans le corps).</td></tr>
+    <tr><td>enctype</td><td>Format d'encodage, "multipart/form-data" obligatoire pour l'envoi de fichiers.</td></tr>
+    <tr><td>novalidate</td><td>Desactive la validation automatique du navigateur.</td></tr>
+    <tr><td>autocomplete</td><td>Active/desactive l'auto-completion du navigateur.</td></tr>
+  </tbody>
+</table>
+
+<h2>Types de &lt;input&gt;</h2>
+<p>L'element <code>&lt;input&gt;</code> change totalement de comportement selon son attribut <code>type</code> :</p>
+
+<table class="ref-table">
+  <thead><tr><th>Type</th><th>Usage</th></tr></thead>
+  <tbody>
+    <tr><td>text</td><td>Texte libre sur une ligne (par defaut).</td></tr>
+    <tr><td>password</td><td>Texte masque par des points.</td></tr>
+    <tr><td>email</td><td>Valide automatiquement un format d'e-mail.</td></tr>
+    <tr><td>number</td><td>Nombre, avec fleches d'incrementation. Attributs min, max, step.</td></tr>
+    <tr><td>tel</td><td>Numero de telephone (pas de validation de format automatique).</td></tr>
+    <tr><td>url</td><td>Valide un format d'URL.</td></tr>
+    <tr><td>search</td><td>Champ de recherche, avec une croix pour effacer sur certains navigateurs.</td></tr>
+    <tr><td>date</td><td>Selecteur de date natif.</td></tr>
+    <tr><td>time</td><td>Selecteur d'heure natif.</td></tr>
+    <tr><td>datetime-local</td><td>Selecteur date + heure natif.</td></tr>
+    <tr><td>month</td><td>Selecteur mois/annee.</td></tr>
+    <tr><td>week</td><td>Selecteur de semaine.</td></tr>
+    <tr><td>color</td><td>Selecteur de couleur natif.</td></tr>
+    <tr><td>range</td><td>Curseur (slider). Attributs min, max, step.</td></tr>
+    <tr><td>checkbox</td><td>Case a cocher, plusieurs choix possibles.</td></tr>
+    <tr><td>radio</td><td>Bouton radio, un seul choix par groupe (meme attribut name).</td></tr>
+    <tr><td>file</td><td>Selection de fichier(s). Attribut accept pour filtrer, multiple pour plusieurs fichiers.</td></tr>
+    <tr><td>hidden</td><td>Champ invisible, transmis quand meme au serveur.</td></tr>
+    <tr><td>submit</td><td>Bouton d'envoi du formulaire.</td></tr>
+    <tr><td>reset</td><td>Bouton de reinitialisation du formulaire.</td></tr>
+    <tr><td>button</td><td>Bouton generique sans action native.</td></tr>
+    <tr><td>image</td><td>Bouton d'envoi affiche comme une image.</td></tr>
+</tbody>
+</table>
+
+<h2>Cases a cocher et boutons radio</h2>
+<div class="sandbox" data-sandbox="html">
+  <div class="sandbox-bar"><span>checkbox et radio</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">&lt;fieldset&gt;
+  &lt;legend&gt;Centres d'interet&lt;/legend&gt;
+  &lt;label&gt;&lt;input type="checkbox" name="interet" value="web"&gt; Web&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;&lt;input type="checkbox" name="interet" value="jeux"&gt; Jeux video&lt;/label&gt;
+&lt;/fieldset&gt;
+
+&lt;fieldset&gt;
+  &lt;legend&gt;Niveau&lt;/legend&gt;
+  &lt;label&gt;&lt;input type="radio" name="niveau" value="debutant" checked&gt; Debutant&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;&lt;input type="radio" name="niveau" value="avance"&gt; Avance&lt;/label&gt;
+&lt;/fieldset&gt;</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>Autres elements de formulaire</h2>
+<table class="ref-table">
+  <thead><tr><th>Balise</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>&lt;label&gt;</td><td>Etiquette d'un champ. L'attribut for doit correspondre a l'id du champ (ou le champ est imbrique dans le label).</td></tr>
+    <tr><td>&lt;textarea&gt;</td><td>Zone de texte multi-lignes. Attributs rows, cols, maxlength.</td></tr>
+    <tr><td>&lt;select&gt;</td><td>Liste deroulante. Attribut multiple pour selection multiple.</td></tr>
+    <tr><td>&lt;option&gt;</td><td>Option dans un select. Attributs value, selected, disabled.</td></tr>
+    <tr><td>&lt;optgroup&gt;</td><td>Regroupe des options sous un libelle dans un select.</td></tr>
+    <tr><td>&lt;datalist&gt;</td><td>Liste de suggestions pour un input (autocompletion).</td></tr>
+    <tr><td>&lt;fieldset&gt;</td><td>Regroupe visuellement des champs lies, avec un cadre.</td></tr>
+    <tr><td>&lt;legend&gt;</td><td>Titre d'un fieldset.</td></tr>
+    <tr><td>&lt;output&gt;</td><td>Affiche le resultat d'un calcul (souvent via JavaScript).</td></tr>
+    <tr><td>&lt;progress&gt;</td><td>Barre de progression. Attributs value, max.</td></tr>
+    <tr><td>&lt;meter&gt;</td><td>Jauge de valeur dans un intervalle connu (ex : niveau de disque).</td></tr>
+    <tr><td>&lt;button&gt;</td><td>Bouton generique. Attribut type : submit (defaut dans un form), reset, button.</td></tr>
+  </tbody>
+</table>
+
+<h3>Select et datalist</h3>
+<div class="sandbox" data-sandbox="html">
+  <div class="sandbox-bar"><span>select et datalist</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">&lt;label for="pays"&gt;Pays&lt;/label&gt;
+&lt;select id="pays" name="pays"&gt;
+  &lt;optgroup label="Europe"&gt;
+    &lt;option value="fr"&gt;France&lt;/option&gt;
+    &lt;option value="be"&gt;Belgique&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Amerique"&gt;
+    &lt;option value="ca"&gt;Canada&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;
+
+&lt;label for="langage"&gt;Langage prefere&lt;/label&gt;
+&lt;input list="suggestions" id="langage" name="langage"&gt;
+&lt;datalist id="suggestions"&gt;
+  &lt;option value="Python"&gt;
+  &lt;option value="JavaScript"&gt;
+  &lt;option value="HTML"&gt;
+&lt;/datalist&gt;</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>Attributs de validation</h2>
+<table class="ref-table">
+  <thead><tr><th>Attribut</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>required</td><td>Champ obligatoire avant l'envoi.</td></tr>
+    <tr><td>minlength / maxlength</td><td>Longueur minimale/maximale d'un texte.</td></tr>
+    <tr><td>min / max</td><td>Valeur minimale/maximale (number, range, date).</td></tr>
+    <tr><td>step</td><td>Pas d'incrementation (number, range).</td></tr>
+    <tr><td>pattern</td><td>Expression reguliere que la valeur doit respecter.</td></tr>
+    <tr><td>placeholder</td><td>Texte d'exemple affiche quand le champ est vide.</td></tr>
+    <tr><td>disabled</td><td>Champ desactive, non modifiable et non envoye.</td></tr>
+    <tr><td>readonly</td><td>Champ non modifiable mais envoye avec le formulaire.</td></tr>
+    <tr><td>autofocus</td><td>Le champ recoit le focus au chargement de la page.</td></tr>
+  </tbody>
+</table>
+
+<div class="page-nav">
+  <a href="liens-medias.html"><span class="lbl">Precedent</span>Liens, images, medias</a>
+  <a href="balises-toutes.html"><span class="lbl">Suivant</span>Reference : toutes les balises</a>
+</div>
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

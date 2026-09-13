@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript — Le DOM — apprendre-le-code</title>
+<meta name="description" content="Selectionner, lire et modifier des elements HTML depuis JavaScript.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-js">JS</span><span class="sep">/</span>Le DOM</div>
+<h1>Le DOM (Document Object Model)</h1>
+<p class="lede">Le DOM est la representation en memoire de la page HTML, organisee en arbre. JavaScript peut le lire et le modifier, ce qui met a jour instantanement ce que l'utilisateur voit.</p>
+
+<h2>Selectionner des elements</h2>
+<table class="ref-table">
+  <thead><tr><th>Methode</th><th>Retourne</th></tr></thead>
+  <tbody>
+    <tr><td>document.getElementById(id)</td><td>Un seul element (ou null).</td></tr>
+    <tr><td>document.querySelector(selecteur)</td><td>Le premier element correspondant au selecteur CSS (ou null).</td></tr>
+    <tr><td>document.querySelectorAll(selecteur)</td><td>Une NodeList de tous les elements correspondants.</td></tr>
+    <tr><td>document.getElementsByClassName(nom)</td><td>Une HTMLCollection "live" des elements ayant cette classe.</td></tr>
+    <tr><td>document.getElementsByTagName(tag)</td><td>Une HTMLCollection "live" de toutes les balises de ce type.</td></tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <strong>querySelector est recommande.</strong> Il accepte n'importe quel selecteur CSS (".classe", "#id", "div &gt; p"), ce qui le rend plus flexible que les methodes plus anciennes.
+</div>
+
+<h2>Lire et modifier le contenu</h2>
+<table class="ref-table">
+  <thead><tr><th>Propriete</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>element.textContent</td><td>Texte brut, sans interpretation HTML (le plus sur).</td></tr>
+    <tr><td>element.innerHTML</td><td>Contenu HTML, interprete les balises (attention aux failles XSS avec du contenu utilisateur).</td></tr>
+    <tr><td>element.innerText</td><td>Texte visible tel qu'affiche (respecte le CSS, plus lent que textContent).</td></tr>
+    <tr><td>element.value</td><td>Valeur d'un champ de formulaire (input, textarea, select).</td></tr>
+  </tbody>
+</table>
+
+<h2>Modifier attributs, classes, styles</h2>
+<table class="ref-table">
+  <thead><tr><th>Syntaxe</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>element.getAttribute(nom)</td><td>Lit un attribut.</td></tr>
+    <tr><td>element.setAttribute(nom, valeur)</td><td>Definit un attribut.</td></tr>
+    <tr><td>element.removeAttribute(nom)</td><td>Supprime un attribut.</td></tr>
+    <tr><td>element.classList.add(classe)</td><td>Ajoute une classe CSS.</td></tr>
+    <tr><td>element.classList.remove(classe)</td><td>Retire une classe CSS.</td></tr>
+    <tr><td>element.classList.toggle(classe)</td><td>Ajoute la classe si absente, la retire si presente.</td></tr>
+    <tr><td>element.classList.contains(classe)</td><td>Verifie la presence d'une classe.</td></tr>
+    <tr><td>element.style.propriete</td><td>Modifie une propriete CSS inline (camelCase : backgroundColor).</td></tr>
+    <tr><td>element.dataset.nom</td><td>Lit/ecrit un attribut data-nom.</td></tr>
+  </tbody>
+</table>
+
+<h2>Creer et inserer des elements</h2>
+<div class="code-block">
+  <div class="code-head">creation dynamique</div>
+  <pre><code><span class="tok-kw">const</span> nouveauParagraphe = document.createElement(<span class="tok-str">"p"</span>);
+nouveauParagraphe.textContent = <span class="tok-str">"Ajoute par JavaScript"</span>;
+nouveauParagraphe.classList.add(<span class="tok-str">"info"</span>);
+
+document.body.appendChild(nouveauParagraphe);       <span class="tok-com">// ajoute a la fin</span>
+document.body.prepend(nouveauParagraphe);           <span class="tok-com">// ajoute au debut</span>
+
+<span class="tok-kw">const</span> parent = document.querySelector(<span class="tok-str">"#conteneur"</span>);
+parent.insertBefore(nouveauParagraphe, parent.firstChild);
+
+<span class="tok-com">// Retirer un element</span>
+nouveauParagraphe.remove();</code></pre>
+</div>
+
+<h2>Naviguer dans l'arbre DOM</h2>
+<table class="ref-table">
+  <thead><tr><th>Propriete</th><th>Retourne</th></tr></thead>
+  <tbody>
+    <tr><td>element.parentElement</td><td>L'element parent.</td></tr>
+    <tr><td>element.children</td><td>Les elements enfants directs (HTMLCollection).</td></tr>
+    <tr><td>element.firstElementChild / lastElementChild</td><td>Premier / dernier enfant.</td></tr>
+    <tr><td>element.nextElementSibling / previousElementSibling</td><td>Element frere suivant / precedent.</td></tr>
+    <tr><td>element.closest(selecteur)</td><td>Remonte l'arbre jusqu'a trouver un ancetre correspondant au selecteur.</td></tr>
+  </tbody>
+</table>
+
+<div class="note ok">
+  <strong>textContent vs innerHTML pour la securite.</strong> N'utilisez jamais innerHTML avec du contenu fourni par un utilisateur sans l'assainir au prealable — cela peut permettre l'injection de scripts malveillants (XSS). Preferez textContent quand vous n'avez pas besoin d'interpreter du HTML.
+</div>
+
+<div class="page-nav">
+  <a href="chaines-methodes.html"><span class="lbl">Precedent</span>Chaines : reference des methodes</a>
+  <a href="evenements.html"><span class="lbl">Suivant</span>Evenements</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

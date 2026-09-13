@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS — Flexbox — apprendre-le-code</title>
+<meta name="description" content="Le systeme de mise en page Flexbox : conteneur, items, alignement.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-css">CSS</span><span class="sep">/</span>Flexbox</div>
+<h1>Flexbox</h1>
+<p class="lede">Flexbox est un systeme de mise en page en une dimension (ligne OU colonne), ideal pour aligner et repartir de l'espace entre des elements dans un conteneur.</p>
+
+<h2>Activer Flexbox</h2>
+<div class="sandbox" data-sandbox="css" data-preview-html="&lt;div class='conteneur'&gt;&lt;div class='item'&gt;1&lt;/div&gt;&lt;div class='item'&gt;2&lt;/div&gt;&lt;div class='item'&gt;3&lt;/div&gt;&lt;/div&gt;">
+  <div class="sandbox-bar"><span>display: flex</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">.conteneur {
+  display: flex;
+  gap: 10px;
+  background: #eee;
+  padding: 10px;
+}
+
+.item {
+  background: teal;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  flex: 1;
+}</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>Proprietes du conteneur (parent)</h2>
+<table class="ref-table">
+  <thead><tr><th>Propriete</th><th>Valeurs / role</th></tr></thead>
+  <tbody>
+    <tr><td>display</td><td>flex (bloc) ou inline-flex.</td></tr>
+    <tr><td>flex-direction</td><td>row (defaut), row-reverse, column, column-reverse : l'axe principal.</td></tr>
+    <tr><td>flex-wrap</td><td>nowrap (defaut, une seule ligne), wrap (retour a la ligne), wrap-reverse.</td></tr>
+    <tr><td>flex-flow</td><td>Raccourci pour flex-direction + flex-wrap.</td></tr>
+    <tr><td>justify-content</td><td>Alignement sur l'axe principal : flex-start, flex-end, center, space-between, space-around, space-evenly.</td></tr>
+    <tr><td>align-items</td><td>Alignement sur l'axe secondaire : stretch (defaut), flex-start, flex-end, center, baseline.</td></tr>
+    <tr><td>align-content</td><td>Alignement des lignes entre elles quand flex-wrap cree plusieurs lignes.</td></tr>
+    <tr><td>gap / row-gap / column-gap</td><td>Espace entre les elements, sans marge sur les elements eux-memes.</td></tr>
+  </tbody>
+</table>
+
+<h2>Proprietes des items (enfants)</h2>
+<table class="ref-table">
+  <thead><tr><th>Propriete</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>flex-grow</td><td>Facteur de croissance : combien un item grandit pour occuper l'espace libre (0 = ne grandit pas).</td></tr>
+    <tr><td>flex-shrink</td><td>Facteur de retrecissement quand l'espace manque (1 = retrecit normalement, 0 = ne retrecit jamais).</td></tr>
+    <tr><td>flex-basis</td><td>Taille de depart avant repartition de l'espace libre.</td></tr>
+    <tr><td>flex</td><td>Raccourci grow/shrink/basis. flex: 1 est tres courant (grandit et retrecit egalement).</td></tr>
+    <tr><td>align-self</td><td>Ecrase align-items pour un seul item.</td></tr>
+    <tr><td>order</td><td>Modifie l'ordre visuel sans toucher au HTML (defaut 0, peut etre negatif).</td></tr>
+  </tbody>
+</table>
+
+<h2>Centrer parfaitement un element</h2>
+<div class="sandbox" data-sandbox="css" data-preview-html="&lt;div class='conteneur'&gt;&lt;div class='item'&gt;Centre !&lt;/div&gt;&lt;/div&gt;">
+  <div class="sandbox-bar"><span>Le fameux centrage</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">.conteneur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: #eee;
+}
+
+.item {
+  background: teal;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 6px;
+}</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>justify-content en detail</h2>
+<div class="sandbox" data-sandbox="css" data-preview-html="&lt;div class='conteneur'&gt;&lt;div class='item'&gt;A&lt;/div&gt;&lt;div class='item'&gt;B&lt;/div&gt;&lt;div class='item'&gt;C&lt;/div&gt;&lt;/div&gt;">
+  <div class="sandbox-bar"><span>essayez space-between, center, flex-end...</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">.conteneur {
+  display: flex;
+  justify-content: space-between;
+  background: #eee;
+  padding: 10px;
+}
+
+.item {
+  background: teal;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 6px;
+}</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<div class="page-nav">
+  <a href="texte-typo.html"><span class="lbl">Precedent</span>Texte et typographie</a>
+  <a href="grid.html"><span class="lbl">Suivant</span>CSS Grid</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

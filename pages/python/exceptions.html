@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python — Exceptions et erreurs — apprendre-le-code</title>
+<meta name="description" content="try/except/finally, exceptions courantes et personnalisees.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-py">PY</span><span class="sep">/</span>Exceptions et erreurs</div>
+<h1>Exceptions et gestion des erreurs</h1>
+<p class="lede">Une exception est un evenement qui interrompt le flux normal d'execution. Python permet de la "capturer" pour eviter que le programme ne plante.</p>
+
+<h2>try / except</h2>
+<div class="sandbox" data-sandbox="python">
+  <div class="sandbox-bar"><span>try/except de base</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">try:
+    resultat = 10 / 0
+except ZeroDivisionError:
+    print("Impossible de diviser par zero !")
+
+try:
+    nombre = int("abc")
+except ValueError as e:
+    print("Erreur de conversion :", e)
+
+try:
+    liste = [1, 2, 3]
+    print(liste[10])
+except IndexError:
+    print("Index hors limites")
+except Exception as e:
+    print("Autre erreur :", e)</textarea>
+  <div class="py-output"></div>
+</div>
+
+<h2>else et finally</h2>
+<div class="sandbox" data-sandbox="python">
+  <div class="sandbox-bar"><span>structure complete</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">try:
+    x = int("42")
+except ValueError:
+    print("Echec de conversion")
+else:
+    print("Conversion reussie :", x)   # s'execute seulement si pas d'erreur
+finally:
+    print("Ce bloc s'execute toujours, erreur ou pas")</textarea>
+  <div class="py-output"></div>
+</div>
+
+<h2>Exceptions courantes</h2>
+<table class="ref-table">
+  <thead><tr><th>Exception</th><th>Se produit quand...</th></tr></thead>
+  <tbody>
+    <tr><td>ValueError</td><td>une valeur a le bon type mais une valeur invalide (int("abc")).</td></tr>
+    <tr><td>TypeError</td><td>une operation est appliquee a un type incompatible ("a" + 5).</td></tr>
+    <tr><td>IndexError</td><td>un index de liste/tuple est hors limites.</td></tr>
+    <tr><td>KeyError</td><td>une cle de dictionnaire n'existe pas.</td></tr>
+    <tr><td>AttributeError</td><td>un attribut/methode n'existe pas sur l'objet.</td></tr>
+    <tr><td>NameError</td><td>une variable n'est pas definie.</td></tr>
+    <tr><td>ZeroDivisionError</td><td>une division par zero est tentee.</td></tr>
+    <tr><td>FileNotFoundError</td><td>un fichier a ouvrir n'existe pas.</td></tr>
+    <tr><td>ImportError / ModuleNotFoundError</td><td>un module a importer n'existe pas.</td></tr>
+    <tr><td>StopIteration</td><td>un iterateur n'a plus d'elements.</td></tr>
+    <tr><td>RecursionError</td><td>une fonction recursive depasse la profondeur maximale.</td></tr>
+  </tbody>
+</table>
+
+<h2>Lever ses propres exceptions</h2>
+<div class="sandbox" data-sandbox="python">
+  <div class="sandbox-bar"><span>raise et exceptions personnalisees</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">def diviser(a, b):
+    if b == 0:
+        raise ValueError("b ne peut pas etre zero")
+    return a / b
+
+try:
+    diviser(10, 0)
+except ValueError as e:
+    print("Erreur attrapee :", e)
+
+# Exception personnalisee
+class SoldeInsuffisantError(Exception):
+    pass
+
+def retirer(solde, montant):
+    if montant > solde:
+        raise SoldeInsuffisantError(f"Solde {solde} insuffisant pour retirer {montant}")
+    return solde - montant
+
+try:
+    retirer(100, 150)
+except SoldeInsuffisantError as e:
+    print(e)</textarea>
+  <div class="py-output"></div>
+</div>
+
+<div class="note">
+  <strong>Bonne pratique.</strong> Attrapez toujours l'exception la plus specifique possible plutot qu'un <code>except:</code> generique — cela evite de masquer des bugs inattendus qui n'ont rien a voir avec le probleme anticipe.
+</div>
+
+<div class="page-nav">
+  <a href="poo.html"><span class="lbl">Precedent</span>Programmation orientee objet</a>
+  <a href="fichiers.html"><span class="lbl">Suivant</span>Fichiers et contexte</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript — Objets — apprendre-le-code</title>
+<meta name="description" content="Objets, destructuration, classes et methodes statiques Object.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-js">JS</span><span class="sep">/</span>Objets</div>
+<h1>Objets</h1>
+<p class="lede">Un objet regroupe des paires cle-valeur. C'est la structure de donnees la plus fondamentale de JavaScript — meme les tableaux et fonctions sont techniquement des objets.</p>
+
+<h2>Creer et acceder</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>objets de base</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const personne = {
+  nom: "Diallo",
+  age: 28,
+  ville: "Dakar",
+  saluer() {                    // methode raccourcie (ES6)
+    return `Bonjour, je suis ${this.nom}`;
+  }
+};
+
+console.log(personne.nom);        // notation point
+console.log(personne["age"]);     // notation crochets (utile avec une variable)
+console.log(personne.saluer());
+
+personne.email = "d@exemple.fr";  // ajoute une propriete
+delete personne.ville;            // supprime une propriete
+console.log(personne);</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Notation raccourcie et destructuration</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>shorthand et destructuring</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const nom = "Eli";
+const age = 30;
+
+// Notation raccourcie : si la cle et la variable ont le meme nom
+const personne = { nom, age };
+console.log(personne);            // { nom: "Eli", age: 30 }
+
+// Destructuration : extraire des proprietes dans des variables
+const { nom: n, age: a } = personne;
+console.log(n, a);
+
+// Destructuration avec valeur par defaut
+const { ville = "Inconnue" } = personne;
+console.log(ville);
+
+// Destructuration de tableau
+const [premier, second] = ["a", "b", "c"];
+console.log(premier, second);</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Object : methodes statiques utiles</h2>
+<div class="fn-grid">
+  <div class="fn-card"><code class="fn-name">Object.keys(obj)</code><p>Retourne un tableau des cles.</p></div>
+  <div class="fn-card"><code class="fn-name">Object.values(obj)</code><p>Retourne un tableau des valeurs.</p></div>
+  <div class="fn-card"><code class="fn-name">Object.entries(obj)</code><p>Retourne un tableau de paires [cle, valeur].</p></div>
+  <div class="fn-card"><code class="fn-name">Object.fromEntries(arr)</code><p>Construit un objet a partir de paires [cle, valeur].</p></div>
+  <div class="fn-card"><code class="fn-name">Object.assign(cible, ...sources)</code><p>Fusionne des objets dans la cible.</p></div>
+  <div class="fn-card"><code class="fn-name">Object.freeze(obj)</code><p>Rend l'objet immuable (aucune modification possible).</p></div>
+  <div class="fn-card"><code class="fn-name">Object.keys(obj).length</code><p>Nombre de proprietes (pas de .length direct sur un objet).</p></div>
+</div>
+
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>parcourir un objet</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const stock = { pommes: 50, poires: 30, kiwis: 15 };
+
+for (const [fruit, quantite] of Object.entries(stock)) {
+  console.log(`${fruit} : ${quantite} unites`);
+}
+
+console.log(Object.keys(stock));      // ["pommes", "poires", "kiwis"]
+console.log(Object.values(stock));    // [50, 30, 15]
+
+const total = Object.values(stock).reduce((a, b) => a + b, 0);
+console.log("Total :", total);</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Classes (sucre syntaxique sur les prototypes)</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>class</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">class Animal {
+  constructor(nom) {
+    this.nom = nom;
+  }
+  parler() {
+    return "...";
+  }
+}
+
+class Chat extends Animal {
+  parler() {
+    return `${this.nom} dit : Miaou !`;
+  }
+}
+
+const felix = new Chat("Felix");
+console.log(felix.parler());
+console.log(felix instanceof Animal);   // true</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Copie superficielle vs profonde</h2>
+<div class="code-block">
+  <div class="code-head">copies.js</div>
+  <pre><code><span class="tok-kw">const</span> original = { a: <span class="tok-num">1</span>, b: { c: <span class="tok-num">2</span> } };
+
+<span class="tok-com">// Copie superficielle (shallow) : b reste partage !</span>
+<span class="tok-kw">const</span> copie1 = { ...original };
+<span class="tok-kw">const</span> copie2 = Object.assign({}, original);
+
+<span class="tok-com">// Copie profonde (deep) : totalement independante</span>
+<span class="tok-kw">const</span> copie3 = <span class="tok-fn">structuredClone</span>(original);</code></pre>
+</div>
+
+<div class="page-nav">
+  <a href="tableaux-methodes.html"><span class="lbl">Precedent</span>Tableaux : reference des methodes</a>
+  <a href="chaines-methodes.html"><span class="lbl">Suivant</span>Chaines : reference des methodes</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

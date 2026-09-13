@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS — Texte et typographie — apprendre-le-code</title>
+<meta name="description" content="Polices, tailles, espacement et alignement du texte en CSS.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-css">CSS</span><span class="sep">/</span>Texte et typographie</div>
+<h1>Texte et typographie</h1>
+<p class="lede">Le controle fin de la typographie est l'une des forces majeures de CSS : polices, tailles, espacements, alignements.</p>
+
+<h2>Polices</h2>
+<table class="ref-table">
+  <thead><tr><th>Propriete</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>font-family</td><td>Liste de polices par ordre de preference, avec une famille generique en secours (sans-serif, serif, monospace).</td></tr>
+    <tr><td>font-size</td><td>Taille du texte : px, em, rem, %, vw.</td></tr>
+    <tr><td>font-weight</td><td>Graisse : normal (400), bold (700), ou valeur numerique de 100 a 900.</td></tr>
+    <tr><td>font-style</td><td>normal, italic, oblique.</td></tr>
+    <tr><td>font-variant</td><td>small-caps et autres variantes typographiques.</td></tr>
+    <tr><td>font</td><td>Raccourci combinant style, weight, size, line-height, family.</td></tr>
+    <tr><td>@font-face</td><td>Regle pour charger une police personnalisee depuis un fichier.</td></tr>
+  </tbody>
+</table>
+
+<div class="sandbox" data-sandbox="css" data-preview-html="&lt;p&gt;Le rapide renard brun saute par-dessus le chien paresseux.&lt;/p&gt;">
+  <div class="sandbox-bar"><span>Polices</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">p {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>Unites de taille</h2>
+<table class="ref-table">
+  <thead><tr><th>Unite</th><th>Base de calcul</th></tr></thead>
+  <tbody>
+    <tr><td>px</td><td>Pixel, taille absolue fixe.</td></tr>
+    <tr><td>em</td><td>Relative a la taille de police de l'element parent (cumulatif si imbrique).</td></tr>
+    <tr><td>rem</td><td>Relative a la taille de police de l'element racine (html), plus previsible que em.</td></tr>
+    <tr><td>%</td><td>Pourcentage de la valeur de reference (varie selon la propriete).</td></tr>
+    <tr><td>vw / vh</td><td>1% de la largeur / hauteur de la fenetre (viewport).</td></tr>
+    <tr><td>vmin / vmax</td><td>1% du plus petit / plus grand cote du viewport.</td></tr>
+    <tr><td>ch</td><td>Largeur du caractere "0" de la police courante, utile pour limiter une largeur de texte.</td></tr>
+</tbody>
+</table>
+
+<h2>Espacement et alignement</h2>
+<table class="ref-table">
+  <thead><tr><th>Propriete</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>line-height</td><td>Hauteur de ligne. Une valeur sans unite (ex : 1.5) est un multiplicateur de la taille de police, recommande.</td></tr>
+    <tr><td>letter-spacing</td><td>Espace entre les caracteres.</td></tr>
+    <tr><td>word-spacing</td><td>Espace entre les mots.</td></tr>
+    <tr><td>text-align</td><td>left, right, center, justify.</td></tr>
+    <tr><td>text-indent</td><td>Indentation de la premiere ligne d'un paragraphe.</td></tr>
+    <tr><td>text-decoration</td><td>underline, overline, line-through, none. Combinable avec couleur et style.</td></tr>
+    <tr><td>text-transform</td><td>uppercase, lowercase, capitalize, none.</td></tr>
+    <tr><td>text-shadow</td><td>Ombre portee sur le texte : decalage x, y, flou, couleur.</td></tr>
+    <tr><td>text-overflow</td><td>Comportement du texte tronque : ellipsis (...) avec overflow:hidden et white-space:nowrap.</td></tr>
+    <tr><td>white-space</td><td>Gestion des espaces/sauts de ligne : normal, nowrap, pre, pre-wrap.</td></tr>
+    <tr><td>word-break</td><td>Regles de coupure des mots trop longs.</td></tr>
+    <tr><td>vertical-align</td><td>Alignement vertical d'un element en ligne ou d'une cellule de tableau.</td></tr>
+    <tr><td>direction</td><td>Sens d'ecriture : ltr, rtl.</td></tr>
+    <tr><td>columns</td><td>Repartit le texte en colonnes de style journal.</td></tr>
+</tbody>
+</table>
+
+<h2>Troncature de texte avec ellipsis</h2>
+<div class="sandbox" data-sandbox="css" data-preview-html="&lt;p class='tronque'&gt;Ceci est un texte tres long qui va etre coupe proprement avec des points de suspension a la fin.&lt;/p&gt;">
+  <div class="sandbox-bar"><span>text-overflow: ellipsis</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">.tronque {
+  width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #ccc;
+  padding: 8px;
+}</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<div class="page-nav">
+  <a href="couleurs-fonds.html"><span class="lbl">Precedent</span>Couleurs et arriere-plans</a>
+  <a href="flexbox.html"><span class="lbl">Suivant</span>Flexbox</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

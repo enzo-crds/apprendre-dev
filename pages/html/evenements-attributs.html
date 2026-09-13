@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML — Attributs evenements — apprendre-le-code</title>
+<meta name="description" content="Tous les attributs on-evenement en HTML.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-html">HTML</span><span class="sep">/</span>Attributs evenements</div>
+<h1>Attributs evenements HTML</h1>
+<p class="lede">HTML permet de brancher du JavaScript directement sur un element via des attributs "on...". En pratique, on prefere souvent addEventListener en JS moderne, mais ces attributs restent valides et utiles a connaitre.</p>
+
+<div class="sandbox" data-sandbox="html">
+  <div class="sandbox-bar"><span>evenement en ligne</span><button data-action="reset">Reinitialiser</button></div>
+  <textarea spellcheck="false">&lt;button onclick="alert('Bonjour !')"&gt;Cliquez-moi&lt;/button&gt;</textarea>
+  <iframe title="apercu"></iframe>
+</div>
+
+<h2>Souris</h2>
+<table class="ref-table">
+  <thead><tr><th>Attribut</th><th>Se declenche quand...</th></tr></thead>
+  <tbody>
+    <tr><td>onclick</td><td>l'element est clique.</td></tr>
+    <tr><td>ondblclick</td><td>l'element est double-clique.</td></tr>
+    <tr><td>onmousedown</td><td>le bouton de la souris est enfonce.</td></tr>
+    <tr><td>onmouseup</td><td>le bouton de la souris est relache.</td></tr>
+    <tr><td>onmouseover</td><td>le curseur entre sur l'element.</td></tr>
+    <tr><td>onmouseout</td><td>le curseur quitte l'element.</td></tr>
+    <tr><td>onmousemove</td><td>le curseur bouge sur l'element.</td></tr>
+    <tr><td>oncontextmenu</td><td>le clic droit est effectue.</td></tr>
+    <tr><td>onwheel</td><td>la molette de la souris est utilisee.</td></tr>
+  </tbody>
+</table>
+
+<h2>Clavier</h2>
+<table class="ref-table">
+  <thead><tr><th>Attribut</th><th>Se declenche quand...</th></tr></thead>
+  <tbody>
+    <tr><td>onkeydown</td><td>une touche est enfoncee.</td></tr>
+    <tr><td>onkeyup</td><td>une touche est relachee.</td></tr>
+    <tr><td>onkeypress</td><td>une touche generant un caractere est pressee (obsolete, preferer keydown).</td></tr>
+  </tbody>
+</table>
+
+<h2>Formulaire</h2>
+<table class="ref-table">
+  <thead><tr><th>Attribut</th><th>Se declenche quand...</th></tr></thead>
+  <tbody>
+    <tr><td>onsubmit</td><td>le formulaire est soumis.</td></tr>
+    <tr><td>onreset</td><td>le formulaire est reinitialise.</td></tr>
+    <tr><td>onchange</td><td>la valeur d'un champ change et perd le focus.</td></tr>
+    <tr><td>oninput</td><td>la valeur d'un champ change, a chaque frappe.</td></tr>
+    <tr><td>onfocus</td><td>l'element recoit le focus.</td></tr>
+    <tr><td>onblur</td><td>l'element perd le focus.</td></tr>
+    <tr><td>oninvalid</td><td>un champ echoue a la validation native.</td></tr>
+    <tr><td>onselect</td><td>du texte est selectionne dans un champ.</td></tr>
+  </tbody>
+</table>
+
+<h2>Fenetre et document</h2>
+<table class="ref-table">
+  <thead><tr><th>Attribut</th><th>Se declenche quand...</th></tr></thead>
+  <tbody>
+    <tr><td>onload</td><td>la page (ou une ressource comme une image) a fini de charger.</td></tr>
+    <tr><td>onunload</td><td>l'utilisateur quitte la page.</td></tr>
+    <tr><td>onresize</td><td>la fenetre est redimensionnee.</td></tr>
+    <tr><td>onscroll</td><td>un element ou la page defile.</td></tr>
+    <tr><td>oncopy / oncut / onpaste</td><td>une action de presse-papier est effectuee.</td></tr>
+  </tbody>
+</table>
+
+<h2>Media (audio/video)</h2>
+<table class="ref-table">
+  <thead><tr><th>Attribut</th><th>Se declenche quand...</th></tr></thead>
+  <tbody>
+    <tr><td>onplay</td><td>la lecture demarre.</td></tr>
+    <tr><td>onpause</td><td>la lecture est mise en pause.</td></tr>
+    <tr><td>onended</td><td>la lecture atteint la fin.</td></tr>
+    <tr><td>ontimeupdate</td><td>la position de lecture change.</td></tr>
+    <tr><td>onvolumechange</td><td>le volume est modifie.</td></tr>
+  </tbody>
+</table>
+
+<div class="note warn">
+  <strong>Bonne pratique moderne.</strong> En JavaScript, preferez <code>element.addEventListener('click', fn)</code> aux attributs onclick en ligne : cela separe structure (HTML) et comportement (JS), et permet plusieurs ecouteurs sur le meme evenement. Voir la page Evenements du chapitre JavaScript.
+</div>
+
+<div class="page-nav">
+  <a href="attributs-globaux.html"><span class="lbl">Precedent</span>Attributs globaux</a>
+  <a href="meta-head.html"><span class="lbl">Suivant</span>Head, meta, SEO</a>
+</div>
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

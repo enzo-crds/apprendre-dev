@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript — Asynchrone — apprendre-le-code</title>
+<meta name="description" content="Promises, async/await, fetch et Promise.all.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-js">JS</span><span class="sep">/</span>Asynchrone : promesses et async/await</div>
+<h1>Asynchrone : promesses et async/await</h1>
+<p class="lede">JavaScript est mono-thread mais gere l'asynchrone grace a une boucle d'evenements (event loop). Les Promises et async/await sont les outils modernes pour ecrire du code asynchrone lisible.</p>
+
+<h2>Le probleme resolu par les Promises</h2>
+<p>Une operation asynchrone (requete reseau, minuteur, lecture de fichier) ne bloque pas le reste du programme : elle "promet" un resultat futur.</p>
+
+<h2>Creer et utiliser une Promise</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>Promise de base</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const attendre = (ms) => new Promise((resolve) => {
+  setTimeout(() => resolve(`Attendu ${ms}ms`), ms);
+});
+
+attendre(100)
+  .then((message) => {
+    console.log(message);
+    return "etape suivante";
+  })
+  .then((valeur) => console.log(valeur))
+  .catch((erreur) => console.error(erreur));
+
+console.log("Cette ligne s'affiche AVANT le resultat de la promesse");</textarea>
+  <div class="js-output"></div>
+</div>
+
+<table class="ref-table">
+  <thead><tr><th>Etat / methode</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>pending</td><td>Etat initial, ni resolue ni rejetee.</td></tr>
+    <tr><td>fulfilled</td><td>Resolue avec succes.</td></tr>
+    <tr><td>rejected</td><td>Rejetee avec une erreur.</td></tr>
+    <tr><td>.then(fn)</td><td>Execute fn quand la promesse est resolue.</td></tr>
+    <tr><td>.catch(fn)</td><td>Execute fn si la promesse est rejetee.</td></tr>
+    <tr><td>.finally(fn)</td><td>Execute fn dans tous les cas, succes ou echec.</td></tr>
+    <tr><td>Promise.resolve(x)</td><td>Cree une promesse deja resolue avec la valeur x.</td></tr>
+    <tr><td>Promise.reject(err)</td><td>Cree une promesse deja rejetee.</td></tr>
+    <tr><td>Promise.all(promesses)</td><td>Attend que toutes les promesses soient resolues (echoue si une seule echoue).</td></tr>
+    <tr><td>Promise.allSettled(promesses)</td><td>Attend toutes les promesses, succes ou echec, sans jamais rejeter.</td></tr>
+    <tr><td>Promise.race(promesses)</td><td>Se resout des que la premiere promesse se termine.</td></tr>
+  </tbody>
+</table>
+
+<h2>async/await : la syntaxe moderne</h2>
+<p><code>async/await</code> est du sucre syntaxique par-dessus les Promises : le code asynchrone se lit comme du code synchrone, plus facile a suivre.</p>
+
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>async/await</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const attendre = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function sequence() {
+  console.log("Debut");
+  await attendre(100);
+  console.log("Apres 100ms");
+  await attendre(50);
+  console.log("Apres 50ms de plus");
+  return "Termine";
+}
+
+sequence().then((resultat) => console.log(resultat));
+
+// Gestion d'erreur avec try/catch
+async function avecGestionErreur() {
+  try {
+    await Promise.reject(new Error("Echec simule"));
+  } catch (erreur) {
+    console.log("Erreur attrapee :", erreur.message);
+  }
+}
+avecGestionErreur();</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>fetch : requetes HTTP</h2>
+<div class="code-block">
+  <div class="code-head">fetch avec async/await</div>
+  <pre><code><span class="tok-kw">async</span> <span class="tok-kw">function</span> <span class="tok-fn">recupererDonnees</span>() {
+  <span class="tok-kw">try</span> {
+    <span class="tok-kw">const</span> reponse = <span class="tok-kw">await</span> fetch(<span class="tok-str">"https://api.exemple.com/donnees"</span>);
+    <span class="tok-kw">if</span> (!reponse.ok) {
+      <span class="tok-kw">throw</span> <span class="tok-kw">new</span> Error(<span class="tok-str">`Erreur HTTP : ${reponse.status}`</span>);
+    }
+    <span class="tok-kw">const</span> donnees = <span class="tok-kw">await</span> reponse.json();
+    <span class="tok-fn">console</span>.log(donnees);
+  } <span class="tok-kw">catch</span> (erreur) {
+    <span class="tok-fn">console</span>.error(<span class="tok-str">"Echec de la requete :"</span>, erreur);
+  }
+}</code></pre>
+</div>
+
+<h2>Promise.all en pratique</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>Promise.all</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const tache = (nom, ms) => new Promise((resolve) =>
+  setTimeout(() => resolve(`${nom} termine`), ms)
+);
+
+async function lancerTout() {
+  const resultats = await Promise.all([
+    tache("Tache A", 50),
+    tache("Tache B", 30),
+    tache("Tache C", 70)
+  ]);
+  console.log(resultats);   // les trois resultats, dans l'ordre d'appel (pas de fin)
+}
+
+lancerTout();</textarea>
+  <div class="js-output"></div>
+</div>
+
+<div class="page-nav">
+  <a href="evenements.html"><span class="lbl">Precedent</span>Evenements</a>
+  <a href="methodes-globales.html"><span class="lbl">Suivant</span>Reference : objets et methodes globales</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

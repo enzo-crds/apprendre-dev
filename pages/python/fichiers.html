@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python — Fichiers et contexte — apprendre-le-code</title>
+<meta name="description" content="Lire et ecrire des fichiers avec with, pathlib et gestionnaires de contexte.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-py">PY</span><span class="sep">/</span>Fichiers et contexte (with)</div>
+<h1>Fichiers et gestionnaires de contexte</h1>
+<p class="lede">Python permet de lire et ecrire des fichiers facilement, avec un mecanisme (with) qui garantit leur fermeture propre meme en cas d'erreur.</p>
+
+<h2>Ouvrir un fichier avec with</h2>
+<div class="code-block">
+  <div class="code-head">lecture.py</div>
+  <pre><code><span class="tok-kw">with</span> <span class="tok-fn">open</span>(<span class="tok-str">"donnees.txt"</span>, <span class="tok-str">"r"</span>, encoding=<span class="tok-str">"utf-8"</span>) <span class="tok-kw">as</span> f:
+    contenu = f.read()
+    <span class="tok-fn">print</span>(contenu)
+<span class="tok-com"># le fichier est automatiquement ferme ici, meme si une erreur survient</span></code></pre>
+</div>
+
+<p>Sans <code>with</code>, il faudrait appeler manuellement <code>f.close()</code>, avec le risque d'oublier de le faire si une exception survient avant. <code>with</code> est un <strong>gestionnaire de contexte</strong> qui garantit le nettoyage.</p>
+
+<h2>Modes d'ouverture</h2>
+<table class="ref-table">
+  <thead><tr><th>Mode</th><th>Effet</th></tr></thead>
+  <tbody>
+    <tr><td>"r"</td><td>Lecture (par defaut). Erreur si le fichier n'existe pas.</td></tr>
+    <tr><td>"w"</td><td>Ecriture, ecrase le contenu existant (ou cree le fichier).</td></tr>
+    <tr><td>"a"</td><td>Ajout a la fin du fichier existant (ou le cree).</td></tr>
+    <tr><td>"x"</td><td>Creation exclusive, erreur si le fichier existe deja.</td></tr>
+    <tr><td>"b"</td><td>Mode binaire, a combiner avec les precedents (ex : "rb").</td></tr>
+    <tr><td>"r+"</td><td>Lecture et ecriture.</td></tr>
+  </tbody>
+</table>
+
+<h2>Methodes de lecture</h2>
+<table class="ref-table">
+  <thead><tr><th>Methode</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>f.read()</td><td>Lit tout le fichier d'un coup, retourne une chaine.</td></tr>
+    <tr><td>f.readline()</td><td>Lit une seule ligne.</td></tr>
+    <tr><td>f.readlines()</td><td>Lit toutes les lignes, retourne une liste.</td></tr>
+    <tr><td>for ligne in f:</td><td>Parcourt le fichier ligne par ligne, efficace en memoire.</td></tr>
+  </tbody>
+</table>
+
+<h2>Ecrire dans un fichier</h2>
+<div class="code-block">
+  <div class="code-head">ecriture.py</div>
+  <pre><code><span class="tok-kw">with</span> <span class="tok-fn">open</span>(<span class="tok-str">"sortie.txt"</span>, <span class="tok-str">"w"</span>, encoding=<span class="tok-str">"utf-8"</span>) <span class="tok-kw">as</span> f:
+    f.write(<span class="tok-str">"Premiere ligne\n"</span>)
+    f.write(<span class="tok-str">"Deuxieme ligne\n"</span>)
+    f.writelines([<span class="tok-str">"a\n"</span>, <span class="tok-str">"b\n"</span>, <span class="tok-str">"c\n"</span>])</code></pre>
+</div>
+
+<h2>with sur plusieurs fichiers</h2>
+<div class="code-block">
+  <div class="code-head">copier.py</div>
+  <pre><code><span class="tok-kw">with</span> <span class="tok-fn">open</span>(<span class="tok-str">"source.txt"</span>) <span class="tok-kw">as</span> entree, <span class="tok-fn">open</span>(<span class="tok-str">"copie.txt"</span>, <span class="tok-str">"w"</span>) <span class="tok-kw">as</span> sortie:
+    sortie.write(entree.read())</code></pre>
+</div>
+
+<h2>Verifier l'existence avant d'ouvrir</h2>
+<div class="code-block">
+  <div class="code-head">verification.py</div>
+  <pre><code><span class="tok-kw">from</span> pathlib <span class="tok-kw">import</span> Path
+
+chemin = Path(<span class="tok-str">"donnees.txt"</span>)
+<span class="tok-kw">if</span> chemin.exists():
+    contenu = chemin.read_text(encoding=<span class="tok-str">"utf-8"</span>)
+<span class="tok-kw">else</span>:
+    <span class="tok-fn">print</span>(<span class="tok-str">"Fichier introuvable"</span>)</code></pre>
+</div>
+<p><code>pathlib</code> est l'approche moderne recommandee pour manipuler des chemins et fichiers, plus lisible que l'ancien module <code>os.path</code>.</p>
+
+<h2>Creer son propre gestionnaire de contexte</h2>
+<div class="code-block">
+  <div class="code-head">contexte personnalise</div>
+  <pre><code><span class="tok-kw">class</span> <span class="tok-fn">ChronoContexte</span>:
+    <span class="tok-kw">def</span> <span class="tok-fn">__enter__</span>(self):
+        <span class="tok-fn">print</span>(<span class="tok-str">"Debut"</span>)
+        <span class="tok-kw">return</span> self
+
+    <span class="tok-kw">def</span> <span class="tok-fn">__exit__</span>(self, exc_type, exc_val, exc_tb):
+        <span class="tok-fn">print</span>(<span class="tok-str">"Fin (nettoyage garanti)"</span>)
+
+<span class="tok-kw">with</span> ChronoContexte():
+    <span class="tok-fn">print</span>(<span class="tok-str">"Travail en cours..."</span>)</code></pre>
+</div>
+
+<div class="page-nav">
+  <a href="exceptions.html"><span class="lbl">Precedent</span>Exceptions et erreurs</a>
+  <a href="../javascript/index.html"><span class="lbl">Suivant</span>Passer a JavaScript</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

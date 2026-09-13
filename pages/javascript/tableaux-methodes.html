@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript — Tableaux — apprendre-le-code</title>
+<meta name="description" content="Reference complete des methodes de tableau : map, filter, reduce et plus.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-js">JS</span><span class="sep">/</span>Tableaux : reference des methodes</div>
+<h1>Tableaux : reference complete des methodes</h1>
+<p class="lede">Les tableaux JavaScript sont des objets specialises avec un ensemble tres riche de methodes, notamment fonctionnelles (map, filter, reduce) tres utilisees en JS moderne.</p>
+
+<h2>Creer et acceder</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>bases</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const fruits = ["pomme", "poire", "kiwi", "banane"];
+
+console.log(fruits[0]);         // pomme
+console.log(fruits.at(-1));     // banane (methode moderne pour index negatif)
+console.log(fruits.length);     // 4
+console.log(fruits.slice(1, 3)); // ['poire', 'kiwi'] (n'affecte pas l'original)</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Methodes qui MODIFIENT le tableau original</h2>
+<div class="fn-grid">
+  <div class="fn-card"><code class="fn-name">.push(x)</code><p>Ajoute a la fin, retourne la nouvelle longueur.</p></div>
+  <div class="fn-card"><code class="fn-name">.pop()</code><p>Retire et retourne le dernier element.</p></div>
+  <div class="fn-card"><code class="fn-name">.unshift(x)</code><p>Ajoute au debut, retourne la nouvelle longueur.</p></div>
+  <div class="fn-card"><code class="fn-name">.shift()</code><p>Retire et retourne le premier element.</p></div>
+  <div class="fn-card"><code class="fn-name">.splice(debut, nb, ...items)</code><p>Retire/insere des elements a une position donnee.</p></div>
+  <div class="fn-card"><code class="fn-name">.sort(fn)</code><p>Trie sur place. Sans fonction, trie par ordre alphabetique (piege sur les nombres !).</p></div>
+  <div class="fn-card"><code class="fn-name">.reverse()</code><p>Inverse l'ordre sur place.</p></div>
+  <div class="fn-card"><code class="fn-name">.fill(valeur)</code><p>Remplit le tableau avec une valeur.</p></div>
+</div>
+
+<h2>Methodes qui NE modifient PAS l'original (retournent une copie)</h2>
+<div class="fn-grid">
+  <div class="fn-card"><code class="fn-name">.map(fn)</code><p>Nouveau tableau avec le resultat de fn appliquee a chaque element.</p></div>
+  <div class="fn-card"><code class="fn-name">.filter(fn)</code><p>Nouveau tableau avec les elements pour lesquels fn retourne true.</p></div>
+  <div class="fn-card"><code class="fn-name">.reduce(fn, init)</code><p>Reduit le tableau a une seule valeur (somme, objet, etc).</p></div>
+  <div class="fn-card"><code class="fn-name">.slice(debut, fin)</code><p>Extrait une portion sans modifier l'original.</p></div>
+  <div class="fn-card"><code class="fn-name">.concat(autre)</code><p>Fusionne avec un autre tableau, retourne un nouveau tableau.</p></div>
+  <div class="fn-card"><code class="fn-name">.join(sep)</code><p>Assemble les elements en une chaine.</p></div>
+  <div class="fn-card"><code class="fn-name">.flat(profondeur)</code><p>Aplati les sous-tableaux imbriques.</p></div>
+  <div class="fn-card"><code class="fn-name">.flatMap(fn)</code><p>map() suivi de flat(1).</p></div>
+  <div class="fn-card"><code class="fn-name">.toSorted() / .toReversed()</code><p>Versions modernes non-destructives de sort/reverse.</p></div>
+</div>
+
+<h2>Methodes de recherche et test</h2>
+<div class="fn-grid">
+  <div class="fn-card"><code class="fn-name">.find(fn)</code><p>Retourne le premier element correspondant, ou undefined.</p></div>
+  <div class="fn-card"><code class="fn-name">.findIndex(fn)</code><p>Retourne l'index du premier element correspondant, ou -1.</p></div>
+  <div class="fn-card"><code class="fn-name">.includes(x)</code><p>true si x est present dans le tableau.</p></div>
+  <div class="fn-card"><code class="fn-name">.indexOf(x)</code><p>Index de la premiere occurrence de x, ou -1.</p></div>
+  <div class="fn-card"><code class="fn-name">.some(fn)</code><p>true si au moins un element verifie la condition.</p></div>
+  <div class="fn-card"><code class="fn-name">.every(fn)</code><p>true si tous les elements verifient la condition.</p></div>
+  <div class="fn-card"><code class="fn-name">Array.isArray(x)</code><p>Verifie si x est bien un tableau (methode statique).</p></div>
+</div>
+
+<h2>map, filter, reduce en pratique</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>le trio fonctionnel</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const nombres = [1, 2, 3, 4, 5, 6];
+
+const doubles = nombres.map(n => n * 2);
+console.log(doubles);              // [2, 4, 6, 8, 10, 12]
+
+const pairs = nombres.filter(n => n % 2 === 0);
+console.log(pairs);                // [2, 4, 6]
+
+const total = nombres.reduce((acc, n) => acc + n, 0);
+console.log(total);                // 21
+
+// Chainage : les trois combines
+const resultat = nombres
+  .filter(n => n % 2 === 0)
+  .map(n => n * 10)
+  .reduce((acc, n) => acc + n, 0);
+console.log(resultat);             // 120</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Iteration</h2>
+<div class="code-block">
+  <div class="code-head">forEach vs for...of</div>
+  <pre><code><span class="tok-kw">const</span> items = [<span class="tok-str">"a"</span>, <span class="tok-str">"b"</span>, <span class="tok-str">"c"</span>];
+
+items.forEach((item, index) =&gt; {
+  <span class="tok-fn">console</span>.log(index, item);
+});
+<span class="tok-com">// forEach ne peut pas etre interrompue avec break, contrairement a for...of</span></code></pre>
+</div>
+
+<h2>Trier des nombres : le piege de sort()</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>sort() sans fonction = piege</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">const nombres = [10, 1, 21, 2];
+
+console.log(nombres.sort());               // [1, 10, 2, 21] !! tri alphabetique par defaut
+console.log(nombres.sort((a, b) => a - b)); // [1, 2, 10, 21] correct : croissant
+console.log(nombres.sort((a, b) => b - a)); // [21, 10, 2, 1] decroissant</textarea>
+  <div class="js-output"></div>
+</div>
+
+<div class="page-nav">
+  <a href="fonctions.html"><span class="lbl">Precedent</span>Fonctions</a>
+  <a href="objets.html"><span class="lbl">Suivant</span>Objets</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

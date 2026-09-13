@@ -1,0 +1,596 @@
+/* ===================================================================
+   BASE.CSS — Design system global
+   Concept : carnet d'atelier technique. Fond sombre encre, accents
+   par langage utilisés comme repères de navigation (pas de decor).
+=================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Fond / surfaces */
+  --ink-0: #0d0f10;      /* fond page */
+  --ink-1: #14171a;      /* surface carte */
+  --ink-2: #1b1f23;      /* surface elevee / sidebar */
+  --ink-3: #23282d;      /* hover / bordures fortes */
+  --line: #2b3136;       /* bordure standard */
+  --line-soft: #1e2226;
+
+  /* Texte */
+  --text-0: #f2f0e9;     /* texte principal, blanc casse */
+  --text-1: #b8bcc0;     /* texte secondaire */
+  --text-2: #7d8388;     /* texte discret */
+
+  /* Accents par langage */
+  --html-accent: #ff7a45;
+  --html-accent-dim: #4a2c1c;
+  --css-accent: #4da3ff;
+  --css-accent-dim: #1c2f4a;
+  --py-accent: #ffd43b;
+  --py-accent-2: #4b8bbe;
+  --py-accent-dim: #4a3f1c;
+  --js-accent: #f7df1e;
+  --js-accent-dim: #4a441c;
+  --accent-neutral: #7f77dd;
+
+  /* Etats */
+  --ok: #5dcaa5;
+  --warn: #f0997b;
+  --err: #ed6a6a;
+
+  /* Typo */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --sidebar-w: 280px;
+  --content-max: 860px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink-0);
+  color: var(--text-0);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent-neutral); color: #0d0f10; }
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; }
+
+/* Focus visible clavier */
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent-neutral);
+  outline-offset: 2px;
+}
+
+/* ---------- Typo generique ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-0);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: 2.1rem; margin: 0 0 .5rem; }
+h2 {
+  font-size: 1.5rem;
+  margin: 2.8rem 0 1rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line-soft);
+}
+h2:first-of-type { border-top: none; padding-top: 0; margin-top: 1.2rem; }
+h3 { font-size: 1.15rem; margin: 2rem 0 .7rem; }
+h4 { font-size: 1rem; margin: 1.4rem 0 .5rem; color: var(--text-1); }
+
+p { margin: 0 0 1rem; color: var(--text-1); max-width: 74ch; }
+strong { color: var(--text-0); font-weight: 600; }
+
+ul, ol { color: var(--text-1); max-width: 74ch; padding-left: 1.3rem; }
+li { margin-bottom: .4rem; }
+li::marker { color: var(--text-2); }
+
+code {
+  font-family: var(--font-mono);
+  font-size: .88em;
+  background: var(--ink-2);
+  border: 1px solid var(--line-soft);
+  border-radius: 4px;
+  padding: .1em .4em;
+  color: var(--text-0);
+}
+
+/* ---------- Layout global : sidebar + contenu ---------- */
+.app {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: var(--ink-2);
+  border-right: 1px solid var(--line);
+  padding: 1.4rem 1.2rem 3rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: baseline;
+  gap: .4rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-0);
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+.sidebar-brand .dot { color: var(--accent-neutral); }
+
+.sidebar-section-title {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-2);
+  margin: 1.5rem 0 .5rem;
+}
+.sidebar-section-title:first-of-type { margin-top: 0; }
+
+.sidebar nav a {
+  display: block;
+  font-size: .9rem;
+  color: var(--text-1);
+  padding: .35rem .5rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1px;
+  border-left: 2px solid transparent;
+}
+.sidebar nav a:hover {
+  background: var(--ink-3);
+  color: var(--text-0);
+}
+.sidebar nav a.active {
+  background: var(--ink-3);
+  color: var(--text-0);
+  border-left-color: var(--accent-neutral);
+  font-weight: 500;
+}
+
+.lang-html a.active { border-left-color: var(--html-accent); color: var(--html-accent); }
+.lang-css a.active { border-left-color: var(--css-accent); color: var(--css-accent); }
+.lang-python a.active { border-left-color: var(--py-accent); color: var(--py-accent); }
+.lang-javascript a.active { border-left-color: var(--js-accent); color: var(--js-accent); }
+
+.main {
+  padding: 3rem 3.5rem 8rem;
+  max-width: calc(var(--content-max) + 7rem);
+  width: 100%;
+}
+
+.content {
+  max-width: var(--content-max);
+}
+
+/* ---------- Fil d'ariane / meta page ---------- */
+.page-kicker {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: .6rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.page-kicker .sep { color: var(--line); }
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--text-1);
+  max-width: 68ch;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Blocs de code ---------- */
+.code-block {
+  background: var(--ink-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  margin: 1.2rem 0 1.6rem;
+  overflow: hidden;
+}
+.code-block .code-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem .9rem;
+  background: var(--ink-2);
+  border-bottom: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.code-block pre {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+}
+.code-block code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: .87rem;
+  line-height: 1.65;
+  color: var(--text-0);
+  white-space: pre;
+}
+
+/* coloration syntaxique minimale (classes posees manuellement) */
+.tok-kw { color: #ff7a90; }
+.tok-str { color: #a3d977; }
+.tok-num { color: #ffb454; }
+.tok-com { color: #6b7278; font-style: italic; }
+.tok-fn { color: #6fc1ff; }
+.tok-tag { color: #ff7a45; }
+.tok-attr { color: #ffd43b; }
+.tok-prop { color: #4da3ff; }
+.tok-val { color: #a3d977; }
+.tok-punc { color: var(--text-2); }
+
+/* ---------- Bac a sable "essayer" ---------- */
+.sandbox {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  margin: 1.2rem 0 2rem;
+  overflow: hidden;
+  background: var(--ink-1);
+}
+.sandbox-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem .9rem;
+  background: var(--ink-2);
+  border-bottom: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.sandbox-bar button {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  background: var(--ink-3);
+  color: var(--text-0);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: .3rem .6rem;
+  cursor: pointer;
+}
+.sandbox-bar button:hover { border-color: var(--accent-neutral); }
+.sandbox textarea {
+  width: 100%;
+  min-height: 130px;
+  background: var(--ink-1);
+  color: var(--text-0);
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  line-height: 1.6;
+  border: none;
+  border-bottom: 1px solid var(--line-soft);
+  padding: 1rem 1.2rem;
+  resize: vertical;
+}
+.sandbox iframe {
+  width: 100%;
+  min-height: 160px;
+  border: none;
+  background: #fff;
+  display: block;
+}
+.sandbox .py-output, .sandbox .js-output {
+  background: #0a0c0d;
+  color: #d7f7e3;
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  padding: .9rem 1.2rem;
+  white-space: pre-wrap;
+  min-height: 60px;
+  border-top: 1px solid var(--line-soft);
+}
+
+/* ---------- Tableaux de reference ---------- */
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0 2rem;
+  font-size: .88rem;
+}
+.ref-table th, .ref-table td {
+  text-align: left;
+  padding: .55rem .8rem;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+.ref-table th {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--line);
+}
+.ref-table td:first-child, .ref-table th:first-child {
+  font-family: var(--font-mono);
+  color: var(--text-0);
+  white-space: nowrap;
+}
+.ref-table tr:hover td { background: var(--ink-1); }
+
+/* ---------- Grille de resume (cartes fonctions) ---------- */
+.fn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: .6rem;
+  margin: 1.2rem 0 2rem;
+}
+.fn-card {
+  background: var(--ink-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: .7rem .8rem;
+}
+.fn-card code.fn-name {
+  display: block;
+  color: var(--text-0);
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: .85rem;
+  margin-bottom: .25rem;
+}
+.fn-card p {
+  margin: 0;
+  font-size: .8rem;
+  color: var(--text-2);
+}
+
+/* ---------- Callouts ---------- */
+.note {
+  border-left: 3px solid var(--accent-neutral);
+  background: var(--ink-1);
+  padding: .8rem 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 1.2rem 0 1.6rem;
+  font-size: .92rem;
+  color: var(--text-1);
+}
+.note strong { color: var(--text-0); }
+.note.warn { border-left-color: var(--warn); }
+.note.ok { border-left-color: var(--ok); }
+
+/* ---------- Badges niveau ---------- */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--text-2);
+}
+.badge.b-html { border-color: var(--html-accent); color: var(--html-accent); }
+.badge.b-css { border-color: var(--css-accent); color: var(--css-accent); }
+.badge.b-py { border-color: var(--py-accent); color: var(--py-accent); }
+.badge.b-js { border-color: var(--js-accent); color: var(--js-accent); }
+
+/* ---------- Pagination bas de page ---------- */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line-soft);
+}
+.page-nav a {
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  color: var(--text-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: .6rem 1rem;
+  max-width: 45%;
+}
+.page-nav a:hover { border-color: var(--accent-neutral); color: var(--text-0); }
+.page-nav .lbl { display: block; font-size: .68rem; color: var(--text-2); text-transform: uppercase; letter-spacing: .05em; margin-bottom: .2rem; }
+
+/* ---------- Sommaire flottant (table des matieres de page) ---------- */
+.toc {
+  position: fixed;
+  right: 2rem;
+  top: 3rem;
+  width: 200px;
+  font-size: .8rem;
+}
+.toc-title {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: .7rem;
+  color: var(--text-2);
+  margin-bottom: .6rem;
+}
+.toc a {
+  display: block;
+  color: var(--text-2);
+  padding: .25rem 0;
+  border-left: 2px solid var(--line-soft);
+  padding-left: .7rem;
+}
+.toc a:hover { color: var(--text-0); border-left-color: var(--accent-neutral); }
+
+@media (max-width: 1400px) { .toc { display: none; } }
+
+/* ---------- Responsive ---------- */
+.menu-toggle { display: none; }
+
+/* AJOUT : Cache l'element sur grand ecran pour ne pas casser la grille */
+.sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar {
+    position: fixed;
+    left: 0; top: 0;
+    width: 82vw;
+    max-width: 320px;
+    transform: translateX(-100%);
+    transition: transform .2s ease;
+    z-index: 50;
+    box-shadow: 20px 0 40px rgba(0,0,0,.4);
+  }
+  .sidebar.open { transform: translateX(0); }
+  .main { padding: 1.4rem 1.2rem 6rem; }
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-family: var(--font-mono);
+    font-size: .8rem;
+    background: var(--ink-2);
+    color: var(--text-0);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: .5rem .8rem;
+    margin-bottom: 1.4rem;
+    cursor: pointer;
+  }
+  .sidebar-backdrop {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 40;
+  }
+  .sidebar-backdrop.open { display: block; }
+  h1 { font-size: 1.6rem; }
+}
+
+/* Personnalisation de la scrollbar (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ink-2); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line); 
+  border-radius: var(--radius-md); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-2); 
+}
+
+/* Personnalisation de la scrollbar (Firefox) */
+html, .sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) var(--ink-2);
+}
+
+/* Personnalisation de la scrollbar principale (tout a droite) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--ink-0); 
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: var(--line); 
+  border-radius: var(--radius-md); 
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--text-2); 
+}
+
+/* =========================================
+   Bouton et Mode Clair
+========================================= */
+.theme-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 100;
+  background: transparent;
+  color: var(--text-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text-0);
+  border-color: var(--accent-neutral);
+  background: var(--ink-1);
+}
+
+/* Gestion de l'affichage des icônes */
+.theme-toggle .icon-moon { display: none; }
+.theme-toggle .icon-sun { display: block; }
+html.theme-light .theme-toggle .icon-moon { display: block; }
+html.theme-light .theme-toggle .icon-sun { display: none; }
+
+/* Variables du mode clair (écrase le thème sombre) */
+html.theme-light {
+  --ink-0: #f8f9fa;      
+  --ink-1: #ffffff;      
+  --ink-2: #f1f3f5;      
+  --ink-3: #e9ecef;      
+  --line: #dee2e6;       
+  --line-soft: #f8f9fa;
+  --text-0: #212529;     
+  --text-1: #495057;     
+  --text-2: #868e96;     
+}
+
+@media (max-width: 900px) {
+  .theme-toggle { top: 1rem; right: 1rem; }
+}

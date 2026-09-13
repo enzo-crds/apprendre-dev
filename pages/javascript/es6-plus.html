@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript — ES6 et au-dela — apprendre-le-code</title>
+<meta name="description" content="Modules, destructuration avancee, generateurs, champs prives.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-js">JS</span><span class="sep">/</span>ES6 et au-dela</div>
+<h1>ES6 et au-dela</h1>
+<p class="lede">ECMAScript 2015 (ES6) a modernise profondement JavaScript, et chaque version annuelle depuis ajoute de nouvelles fonctionnalites. Voici les plus utilisees en pratique.</p>
+
+<h2>Modules (import/export)</h2>
+<div class="code-block">
+  <div class="code-head">math.js</div>
+  <pre><code><span class="tok-kw">export</span> <span class="tok-kw">function</span> <span class="tok-fn">addition</span>(a, b) {
+  <span class="tok-kw">return</span> a + b;
+}
+
+<span class="tok-kw">export</span> <span class="tok-kw">const</span> PI = <span class="tok-num">3.14159</span>;
+
+<span class="tok-kw">export</span> <span class="tok-kw">default</span> <span class="tok-kw">function</span> <span class="tok-fn">principal</span>() { <span class="tok-com">/* ... */</span> }</code></pre>
+</div>
+<div class="code-block">
+  <div class="code-head">app.js</div>
+  <pre><code><span class="tok-kw">import</span> principal, { addition, PI } <span class="tok-kw">from</span> <span class="tok-str">"./math.js"</span>;
+<span class="tok-fn">console</span>.log(<span class="tok-fn">addition</span>(<span class="tok-num">2</span>, <span class="tok-num">3</span>));</code></pre>
+</div>
+<p>Pour utiliser les modules dans le navigateur, il faut ajouter <code>type="module"</code> a la balise script.</p>
+
+<h2>Destructuration avancee</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>destructuring avance</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">// Destructuration imbriquee
+const utilisateur = {
+  nom: "Iris",
+  adresse: { ville: "Rennes", codePostal: "35000" }
+};
+const { nom, adresse: { ville } } = utilisateur;
+console.log(nom, ville);
+
+// Dans les parametres de fonction
+function afficher({ nom, age = 0 }) {
+  console.log(`${nom}, ${age} ans`);
+}
+afficher({ nom: "Theo" });
+
+// Echanger deux variables sans variable temporaire
+let a = 1, b = 2;
+[a, b] = [b, a];
+console.log(a, b);   // 2 1</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Symbol et iterateurs personnalises</h2>
+<div class="code-block">
+  <div class="code-head">Symbol.iterator</div>
+  <pre><code><span class="tok-kw">const</span> plage = {
+  debut: <span class="tok-num">1</span>,
+  fin: <span class="tok-num">5</span>,
+  [Symbol.iterator]() {
+    <span class="tok-kw">let</span> actuel = <span class="tok-kw">this</span>.debut;
+    <span class="tok-kw">const</span> fin = <span class="tok-kw">this</span>.fin;
+    <span class="tok-kw">return</span> {
+      next() {
+        <span class="tok-kw">return</span> actuel &lt;= fin
+          ? { value: actuel++, done: <span class="tok-kw">false</span> }
+          : { value: <span class="tok-kw">undefined</span>, done: <span class="tok-kw">true</span> };
+      }
+    };
+  }
+};
+
+<span class="tok-kw">for</span> (<span class="tok-kw">const</span> n <span class="tok-kw">of</span> plage) <span class="tok-fn">console</span>.log(n);  <span class="tok-com">// 1 2 3 4 5</span></code></pre>
+</div>
+
+<h2>Generateurs</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>function*</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">function* compteur() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+for (const valeur of compteur()) {
+  console.log(valeur);
+}
+
+// Un generateur peut aussi etre consomme manuellement
+const gen = compteur();
+console.log(gen.next());   // { value: 1, done: false }
+console.log(gen.next());   // { value: 2, done: false }</textarea>
+  <div class="js-output"></div>
+</div>
+
+<h2>Nouveautes recentes utiles</h2>
+<table class="ref-table">
+  <thead><tr><th>Fonctionnalite</th><th>Version</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td>Optional chaining (?.)</td><td>ES2020</td><td>Acces securise aux proprietes imbriquees.</td></tr>
+    <tr><td>Nullish coalescing (??)</td><td>ES2020</td><td>Valeur par defaut seulement pour null/undefined.</td></tr>
+    <tr><td>Promise.allSettled</td><td>ES2020</td><td>Attendre plusieurs promesses sans echec global.</td></tr>
+    <tr><td>String.replaceAll</td><td>ES2021</td><td>Remplacer toutes les occurrences sans regex.</td></tr>
+    <tr><td>Array.at() / String.at()</td><td>ES2022</td><td>Index negatifs sans calcul manuel.</td></tr>
+    <tr><td>Champs prives de classe (#nom)</td><td>ES2022</td><td>Vraie encapsulation privee dans les classes.</td></tr>
+    <tr><td>Array.toSorted/toReversed/toSpliced</td><td>ES2023</td><td>Versions non-destructives des methodes de mutation.</td></tr>
+    <tr><td>Object.groupBy</td><td>ES2024</td><td>Regroupe les elements d'un iterable selon une fonction.</td></tr>
+  </tbody>
+</table>
+
+<h2>Champs prives de classe</h2>
+<div class="sandbox" data-sandbox="js">
+  <div class="sandbox-bar"><span>#champs prives</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">class CompteBancaire {
+  #solde = 0;   // vraiment prive, inaccessible depuis l'exterieur
+
+  deposer(montant) {
+    this.#solde += montant;
+  }
+
+  get solde() {
+    return this.#solde;
+  }
+}
+
+const compte = new CompteBancaire();
+compte.deposer(100);
+console.log(compte.solde);       // 100
+// console.log(compte.#solde);   // erreur de syntaxe : inaccessible</textarea>
+  <div class="js-output"></div>
+</div>
+
+<div class="page-nav">
+  <a href="methodes-globales.html"><span class="lbl">Precedent</span>Reference des objets globaux</a>
+  <a href="../../index.html"><span class="lbl">Suivant</span>Retour a l'accueil</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>

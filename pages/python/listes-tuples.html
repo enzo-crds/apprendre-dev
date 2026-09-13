@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python — Listes et tuples — apprendre-le-code</title>
+<meta name="description" content="Toutes les methodes de liste, slicing, et difference avec les tuples.">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+<a href="../../index.html" class="sidebar-brand"><span class="dot">&gt;_</span>apprendre-le-code</a>
+<div class="sidebar-section-title">HTML</div>
+<nav class="lang-html">
+  <a href="../../pages/html/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/html/structure.html" data-file="structure.html">Structure d'un document</a>
+  <a href="../../pages/html/balises-texte.html" data-file="balises-texte.html">Texte et semantique</a>
+  <a href="../../pages/html/listes-tableaux.html" data-file="listes-tableaux.html">Listes et tableaux</a>
+  <a href="../../pages/html/liens-medias.html" data-file="liens-medias.html">Liens, images, medias</a>
+  <a href="../../pages/html/formulaires.html" data-file="formulaires.html">Formulaires</a>
+  <a href="../../pages/html/balises-toutes.html" data-file="balises-toutes.html">Reference : toutes les balises</a>
+  <a href="../../pages/html/attributs-globaux.html" data-file="attributs-globaux.html">Attributs globaux</a>
+  <a href="../../pages/html/evenements-attributs.html" data-file="evenements-attributs.html">Attributs evenements</a>
+  <a href="../../pages/html/meta-head.html" data-file="meta-head.html">Head, meta, SEO</a>
+  <a href="../../pages/html/accessibilite.html" data-file="accessibilite.html">Accessibilite (a11y)</a>
+</nav>
+<div class="sidebar-section-title">CSS</div>
+<nav class="lang-css">
+  <a href="../../pages/css/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/css/syntaxe-selecteurs.html" data-file="syntaxe-selecteurs.html">Syntaxe et selecteurs</a>
+  <a href="../../pages/css/boite-modele.html" data-file="boite-modele.html">Modele de boite (box model)</a>
+  <a href="../../pages/css/couleurs-fonds.html" data-file="couleurs-fonds.html">Couleurs et arriere-plans</a>
+  <a href="../../pages/css/texte-typo.html" data-file="texte-typo.html">Texte et typographie</a>
+  <a href="../../pages/css/flexbox.html" data-file="flexbox.html">Flexbox</a>
+  <a href="../../pages/css/grid.html" data-file="grid.html">CSS Grid</a>
+  <a href="../../pages/css/positionnement.html" data-file="positionnement.html">Position et affichage</a>
+  <a href="../../pages/css/responsive.html" data-file="responsive.html">Responsive et media queries</a>
+  <a href="../../pages/css/animations-transitions.html" data-file="animations-transitions.html">Transitions et animations</a>
+  <a href="../../pages/css/proprietes-toutes.html" data-file="proprietes-toutes.html">Reference : toutes les proprietes</a>
+  <a href="../../pages/css/fonctions-css.html" data-file="fonctions-css.html">Fonctions CSS</a>
+  <a href="../../pages/css/variables-css.html" data-file="variables-css.html">Variables (custom properties)</a>
+</nav>
+<div class="sidebar-section-title">Python</div>
+<nav class="lang-python">
+  <a href="../../pages/python/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/python/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/python/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/python/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/python/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/python/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/python/listes-tuples.html" data-file="listes-tuples.html">Listes et tuples</a>
+  <a href="../../pages/python/dictionnaires-sets.html" data-file="dictionnaires-sets.html">Dictionnaires et sets</a>
+  <a href="../../pages/python/chaines-fonctions.html" data-file="chaines-fonctions.html">Fonctions sur les chaines</a>
+  <a href="../../pages/python/fonctions-integrees.html" data-file="fonctions-integrees.html">Reference : fonctions integrees</a>
+  <a href="../../pages/python/modules-stdlib.html" data-file="modules-stdlib.html">Modules de la bibliotheque standard</a>
+  <a href="../../pages/python/poo.html" data-file="poo.html">Programmation orientee objet</a>
+  <a href="../../pages/python/exceptions.html" data-file="exceptions.html">Exceptions et erreurs</a>
+  <a href="../../pages/python/fichiers.html" data-file="fichiers.html">Fichiers et contexte (with)</a>
+</nav>
+<div class="sidebar-section-title">JavaScript</div>
+<nav class="lang-javascript">
+  <a href="../../pages/javascript/index.html" data-file="index.html">Introduction</a>
+  <a href="../../pages/javascript/syntaxe-variables.html" data-file="syntaxe-variables.html">Syntaxe et variables</a>
+  <a href="../../pages/javascript/types-donnees.html" data-file="types-donnees.html">Types de donnees</a>
+  <a href="../../pages/javascript/operateurs.html" data-file="operateurs.html">Operateurs</a>
+  <a href="../../pages/javascript/structures-controle.html" data-file="structures-controle.html">Conditions et boucles</a>
+  <a href="../../pages/javascript/fonctions.html" data-file="fonctions.html">Fonctions</a>
+  <a href="../../pages/javascript/tableaux-methodes.html" data-file="tableaux-methodes.html">Tableaux : reference des methodes</a>
+  <a href="../../pages/javascript/objets.html" data-file="objets.html">Objets</a>
+  <a href="../../pages/javascript/chaines-methodes.html" data-file="chaines-methodes.html">Chaines : reference des methodes</a>
+  <a href="../../pages/javascript/dom.html" data-file="dom.html">Le DOM</a>
+  <a href="../../pages/javascript/evenements.html" data-file="evenements.html">Evenements</a>
+  <a href="../../pages/javascript/asynchrone.html" data-file="asynchrone.html">Asynchrone : promesses et async/await</a>
+  <a href="../../pages/javascript/methodes-globales.html" data-file="methodes-globales.html">Reference : objets et methodes globales</a>
+  <a href="../../pages/javascript/es6-plus.html" data-file="es6-plus.html">ES6 et au-dela</a>
+</nav>
+  </aside>
+  <main class="main">
+    <button class="menu-toggle">&#9776; Menu</button>
+    <div class="content">
+
+<div class="page-kicker"><span class="badge b-py">PY</span><span class="sep">/</span>Listes et tuples</div>
+<h1>Listes et tuples</h1>
+<p class="lede">Les listes et tuples sont des sequences ordonnees. La difference cle : les listes sont modifiables (mutables), les tuples ne le sont pas (immuables).</p>
+
+<h2>Creer et acceder</h2>
+<div class="sandbox" data-sandbox="python">
+  <div class="sandbox-bar"><span>listes de base</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">fruits = ["pomme", "poire", "kiwi", "banane"]
+
+print(fruits[0])      # pomme (index depuis 0)
+print(fruits[-1])     # banane (index negatif = depuis la fin)
+print(fruits[1:3])    # ['poire', 'kiwi'] (slice)
+print(fruits[:2])     # deux premiers
+print(fruits[::-1])   # liste inversee
+print(len(fruits))    # 4</textarea>
+  <div class="py-output"></div>
+</div>
+
+<h2>Reference des methodes de liste</h2>
+<div class="fn-grid">
+  <div class="fn-card"><code class="fn-name">.append(x)</code><p>Ajoute x a la fin de la liste.</p></div>
+  <div class="fn-card"><code class="fn-name">.insert(i, x)</code><p>Insere x a la position i.</p></div>
+  <div class="fn-card"><code class="fn-name">.extend(iterable)</code><p>Ajoute tous les elements d'un autre iterable a la fin.</p></div>
+  <div class="fn-card"><code class="fn-name">.remove(x)</code><p>Supprime la premiere occurrence de x (erreur si absent).</p></div>
+  <div class="fn-card"><code class="fn-name">.pop(i)</code><p>Supprime et retourne l'element a l'index i (dernier par defaut).</p></div>
+  <div class="fn-card"><code class="fn-name">.clear()</code><p>Vide completement la liste.</p></div>
+  <div class="fn-card"><code class="fn-name">.index(x)</code><p>Retourne l'index de la premiere occurrence de x.</p></div>
+  <div class="fn-card"><code class="fn-name">.count(x)</code><p>Compte le nombre d'occurrences de x.</p></div>
+  <div class="fn-card"><code class="fn-name">.sort()</code><p>Trie la liste sur place (modifie l'originale). key= et reverse= disponibles.</p></div>
+  <div class="fn-card"><code class="fn-name">.reverse()</code><p>Inverse l'ordre de la liste sur place.</p></div>
+  <div class="fn-card"><code class="fn-name">.copy()</code><p>Retourne une copie superficielle de la liste.</p></div>
+  <div class="fn-card"><code class="fn-name">sorted(liste)</code><p>Fonction (pas methode) qui retourne une NOUVELLE liste triee.</p></div>
+</div>
+
+<div class="sandbox" data-sandbox="python">
+  <div class="sandbox-bar"><span>methodes en action</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">nombres = [5, 2, 8, 1, 9]
+
+nombres.append(3)
+print(nombres)              # [5, 2, 8, 1, 9, 3]
+
+nombres.sort()
+print(nombres)              # [1, 2, 3, 5, 8, 9]
+
+nombres.sort(reverse=True)
+print(nombres)              # [9, 8, 5, 3, 2, 1]
+
+print(nombres.pop())        # 1 (retire et retourne le dernier)
+print(nombres)              # [9, 8, 5, 3, 2]
+
+print(sum(nombres))         # somme : fonction integree, pas une methode
+print(max(nombres), min(nombres))</textarea>
+  <div class="py-output"></div>
+</div>
+
+<h2>Listes imbriquees et copie</h2>
+<div class="note warn">
+  <strong>Piege classique.</strong> <code>b = a</code> ne copie pas la liste : b et a pointent vers la meme liste en memoire. Utilisez <code>b = a.copy()</code> ou <code>b = list(a)</code> pour une vraie copie independante.
+</div>
+
+<h2>Tuples</h2>
+<div class="sandbox" data-sandbox="python">
+  <div class="sandbox-bar"><span>tuples</span><span style="display:flex;gap:.4rem"><button data-action="run">Executer</button><button data-action="reset">Reinitialiser</button></span></div>
+  <textarea spellcheck="false">coordonnees = (48.8566, 2.3522)
+print(coordonnees[0])   # 48.8566
+
+# Dépaquetage (unpacking)
+lat, lon = coordonnees
+print(lat, lon)
+
+# Un tuple ne peut pas etre modifie
+# coordonnees[0] = 0  # leverait une erreur TypeError
+
+# Tuple d'un seul element : la virgule est obligatoire
+un_seul = (5,)
+print(type(un_seul))    # <class 'tuple'></textarea>
+  <div class="py-output"></div>
+</div>
+
+<table class="ref-table">
+  <thead><tr><th>Quand utiliser quoi</th><th>Choix</th></tr></thead>
+  <tbody>
+    <tr><td>La collection va changer (ajouts, suppressions)</td><td>list</td></tr>
+    <tr><td>Donnees fixes qui ne doivent jamais changer (coordonnees, jours de la semaine)</td><td>tuple</td></tr>
+    <tr><td>Cle de dictionnaire (les listes ne peuvent pas etre des cles)</td><td>tuple</td></tr>
+    <tr><td>Retourner plusieurs valeurs d'une fonction</td><td>tuple (implicite avec return a, b)</td></tr>
+  </tbody>
+</table>
+
+<div class="page-nav">
+  <a href="fonctions.html"><span class="lbl">Precedent</span>Fonctions</a>
+  <a href="dictionnaires-sets.html"><span class="lbl">Suivant</span>Dictionnaires et sets</a>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="../../js/site.js"></script>
+</body>
+</html>
